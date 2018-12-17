@@ -1,6 +1,6 @@
 # Battleships
 
-## An A Level project written using Python and PyGame to teach Coordinate Geometry
+## An "A Level" project written using Python and PyGame to teach Coordinate Geometry
 
 This project is intended to introduce the concepts of coordinate Geometry to school children in a fun way using
 game technology.
