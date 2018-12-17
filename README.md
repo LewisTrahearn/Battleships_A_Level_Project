@@ -14,6 +14,7 @@ The technologies used in writing this are as follows:
 - Python (Computer Language)
 - Object Orientated Programming Techniques as the programing style 
 - Pygame - as the gaming library
+- Photoshop for the screen designs
   - The game incorporates 
     - Graphics
     - Sound
