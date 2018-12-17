@@ -12,9 +12,9 @@ game boards, so that each game is a unique challenge to the students.
 
 The technologies used in writing this are as follows:
 - Python (Computer Language)
-- Object Orientated Techniques as the programing language 
+- Object Orientated Programming Techniques as the programing style 
 - Pygame - as the gaming library
-  - Incorporates 
+  - The game incorporates 
     - Graphics
     - Sound
     - Custom Fonts
