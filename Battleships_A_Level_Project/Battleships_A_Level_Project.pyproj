@@ -23,6 +23,13 @@
   <ItemGroup>
     <Compile Include="Battleships_A_Level_Project.py" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
+    <Folder Include="fonts\" />
+    <Folder Include="AppData\" />
+    <Folder Include="design_files\" />
+    <Folder Include="Sound\" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
        Visual Studio and specify your pre- and post-build commands in
