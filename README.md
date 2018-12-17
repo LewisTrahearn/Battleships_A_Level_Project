@@ -7,7 +7,7 @@ game technology.
 
 The game is a fun easy to use desktop game for 1 or two players.
 
-I keeps scores in order to add an element of competition and generates random cartesian coordinate system on the 
+It keeps scores in order to add an element of competition and generates random cartesian coordinate system on the 
 game boards, so that each game is unique challenge to the students.
 
 The technologies used in writing this are as follows:
