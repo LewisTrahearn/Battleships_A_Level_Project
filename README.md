@@ -12,7 +12,7 @@ game boards, so that each game is a unique challenge to the students.
 
 The technologies used in writing this are as follows:
 - Python (Computer Language)
-- Visual Studio 2017for the IDE
+- Visual Studio 2017 for the IDE
 - Coding Standards use PEP 8 standard (https://www.python.org/dev/peps/pep-0008/#class-names)
 - Object Orientated Programming Techniques as the programing style 
 - Pygame - as the gaming library
