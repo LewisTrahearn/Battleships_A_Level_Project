@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>5de28d57-0a5e-4776-9b7f-100fdfadeaeb</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Battleships_A_Level_Project.py</StartupFile>
+    <StartupFile>main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,6 +22,22 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Battleships_A_Level_Project.py" />
+    <Compile Include="battleships_game.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="navigate.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="facade_layer.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="main.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MenuPointer.py" />
+    <Compile Include="splashscreen.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\" />
@@ -29,6 +45,33 @@
     <Folder Include="AppData\" />
     <Folder Include="design_files\" />
     <Folder Include="Sound\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="design_files\bATTLESHIPS.psd" />
+    <Content Include="design_files\splashscreen.psd" />
+    <Content Include="fonts\ArchivoNarrow-Bold.ttf" />
+    <Content Include="fonts\ArchivoNarrow-BoldItalic.ttf" />
+    <Content Include="fonts\ArchivoNarrow-Italic.ttf" />
+    <Content Include="fonts\ArchivoNarrow-Medium.ttf" />
+    <Content Include="fonts\ArchivoNarrow-MediumItalic.ttf" />
+    <Content Include="fonts\ArchivoNarrow-Regular.ttf" />
+    <Content Include="fonts\ArchivoNarrow-SemiBold.ttf" />
+    <Content Include="fonts\ArchivoNarrow-SemiBoldItalic.ttf" />
+    <Content Include="fonts\OFL.txt" />
+    <Content Include="fonts\PirataOne-Regular.ttf" />
+    <Content Include="fonts\Pirate Ship.ttf" />
+    <Content Include="images\bATTLESHIPS.png" />
+    <Content Include="images\crossout.png" />
+    <Content Include="images\explosion.png" />
+    <Content Include="images\explosion_miss.png" />
+    <Content Include="images\MenuPointer.png" />
+    <Content Include="images\Next.png" />
+    <Content Include="images\splashscreen.png" />
+    <Content Include="images\splashscreen_8bit.png" />
+    <Content Include="Sound\Explosion+2.mp3" />
+    <Content Include="Sound\ExplosionWithSplash.mp3" />
+    <Content Include="Sound\Missile+1.mp3" />
+    <Content Include="Sound\rollover.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
