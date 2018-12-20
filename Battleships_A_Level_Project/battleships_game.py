@@ -27,6 +27,9 @@ Author:
 
 
 import splashscreen as ss
+import login as LoginScreen
+from navigate import Navigate
+
 
 class BattleshipsGame():
     """
@@ -50,3 +53,8 @@ class BattleshipsGame():
     def play_game(self):
         splash = ss.SplashScreen(0, 0, 1280, 1024)
         where_next = splash.display()
+
+        while True:
+            if where_next == Navigate.LOGIN:
+                login = LoginScreen.Login(0, 0, 1280, 1024)
+                login.display()
