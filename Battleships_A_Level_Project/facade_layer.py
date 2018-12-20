@@ -37,7 +37,7 @@ class facade_layer(object):
     """
     description:
     a facade layer is a design pattern within UML (Unified Modelling Language) that allows you to put a simpler
-    interface in place for a group of classes.
+    interface in place for a group of classes. Think of it like a multi-tool or a generic library of helper methods. 
 
     In our case the interface I am trying to simplify is a layer between my game logic
     and the pygame library, so where possible I shall put in here common methods

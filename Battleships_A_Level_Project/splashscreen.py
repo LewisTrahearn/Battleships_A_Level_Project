@@ -34,9 +34,9 @@ from pygame.locals import *
 
 from navigate import Navigate
 
-import facade_layer as Facade
 from menuPointer import MenuPointer
 
+import facade_layer as Facade
 
 class SplashScreen():
     """

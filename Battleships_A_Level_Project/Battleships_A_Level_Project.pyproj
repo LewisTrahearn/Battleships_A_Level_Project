@@ -25,6 +25,9 @@
     <Compile Include="battleships_game.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="login.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="navigate.py">
       <SubType>Code</SubType>
     </Compile>
@@ -34,7 +37,8 @@
     <Compile Include="main.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MenuPointer.py" />
+    <Compile Include="menuPointer.py" />
+    <Compile Include="pygame_textinput.py" />
     <Compile Include="splashscreen.py">
       <SubType>Code</SubType>
     </Compile>
@@ -47,8 +51,10 @@
     <Folder Include="Sound\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AppData\Database.xml" />
     <Content Include="design_files\bATTLESHIPS.psd" />
     <Content Include="design_files\splashscreen.psd" />
+    <Content Include="design_files\USS-Carl-Vinson-US-Navy.psd" />
     <Content Include="fonts\ArchivoNarrow-Bold.ttf" />
     <Content Include="fonts\ArchivoNarrow-BoldItalic.ttf" />
     <Content Include="fonts\ArchivoNarrow-Italic.ttf" />
@@ -68,6 +74,7 @@
     <Content Include="images\Next.png" />
     <Content Include="images\splashscreen.png" />
     <Content Include="images\splashscreen_8bit.png" />
+    <Content Include="images\login.png" />
     <Content Include="Sound\Explosion+2.mp3" />
     <Content Include="Sound\ExplosionWithSplash.mp3" />
     <Content Include="Sound\Missile+1.mp3" />
