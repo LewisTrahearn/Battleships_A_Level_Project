@@ -28,6 +28,7 @@ Author:
 
 import splashscreen as ss
 import login as LoginScreen
+import Register as RegisterScreen 
 from navigate import Navigate
 
 
@@ -50,11 +51,37 @@ class BattleshipsGame():
     def __init__(self):
         pass
 
-    def play_game(self):
+    def _login(self):
+        login = LoginScreen.Login(0, 0, 1280, 1024)
+        return login.display() 
+
+    def _register(self):
+        register = RegisterScreen.Register(0, 0, 1280, 1024)
+        return register.display()
+
+
+    def _splashscreen(self):
         splash = ss.SplashScreen(0, 0, 1280, 1024)
         where_next = splash.display()
+        return where_next
+
+
+    def play_game(self):
+       
+        where_next = Navigate.SPLASHSCREEN
 
         while True:
             if where_next == Navigate.LOGIN:
-                login = LoginScreen.Login(0, 0, 1280, 1024)
-                login.display()
+                where_next = self._login()
+
+            if where_next == Navigate.SPLASHSCREEN:
+                where_next = self._splashscreen()
+
+
+            if where_next == Navigate.REGISTER:
+                where_next = self._register()
+
+               
+
+
+
