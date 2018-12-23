@@ -39,6 +39,9 @@
     </Compile>
     <Compile Include="menuPointer.py" />
     <Compile Include="pygame_textinput.py" />
+    <Compile Include="Register.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="splashscreen.py">
       <SubType>Code</SubType>
     </Compile>
@@ -53,6 +56,7 @@
   <ItemGroup>
     <Content Include="AppData\Database.xml" />
     <Content Include="design_files\bATTLESHIPS.psd" />
+    <Content Include="design_files\Register.psd" />
     <Content Include="design_files\splashscreen.psd" />
     <Content Include="design_files\USS-Carl-Vinson-US-Navy.psd" />
     <Content Include="fonts\ArchivoNarrow-Bold.ttf" />
@@ -72,6 +76,7 @@
     <Content Include="images\explosion_miss.png" />
     <Content Include="images\MenuPointer.png" />
     <Content Include="images\Next.png" />
+    <Content Include="images\Register.png" />
     <Content Include="images\splashscreen.png" />
     <Content Include="images\splashscreen_8bit.png" />
     <Content Include="images\login.png" />

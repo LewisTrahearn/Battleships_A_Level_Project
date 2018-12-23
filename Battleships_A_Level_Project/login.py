@@ -100,8 +100,8 @@ class Login():
         ################################################
         while True:
 
-            #cap the framerate to 5 frames per second
-            clock.tick(5)
+            #cap the framerate to 30 frames per second
+            clock.tick(30)
 
             # this loop will walk through a list of captured events
             # and react according to the specific ones we are interested in.
@@ -109,7 +109,7 @@ class Login():
 
             for event in events:
                 if event.type == QUIT or (event.type == KEYDOWN and event.key == K_ESCAPE):
-                    return Navigate.QUIT_SPLASHSCREEN
+                    return Navigate.SPLASHSCREEN
                 
                 ## Get the current mouse positional information
                 pos = pygame.mouse.get_pos()
