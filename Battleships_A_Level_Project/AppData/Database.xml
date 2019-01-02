@@ -1,27 +1,67 @@
-<?xml version="1.0" encoding="utf-8"?>
-<root>
-  <users>
-    <user>
-      <forename>Ian</forename>
-      <surname>Trahearn</surname>
-      <username>maddog</username>
-      <email></email>
-      <password></password>
-      <stats>
-        <stat gametime="20mins" win="true" opponent="computer" number_of_shots="44" />
-        <stat gametime="40mins" win="true" opponent="lewis" number_of_shots="44" />
-      </stats>
-    </user>
-    <user>
-      <forename>Lewis</forename>
-      <surname>Trahearn</surname>
-      <username>nelson</username>
-      <email></email>
-      <password></password>
-      <stats>
-        <stat gametime="20mins" win="true" opponent="computer" number_of_shots="44" />
-        <stat gametime="40mins" win="true" opponent="lewis" number_of_shots="44" />
-      </stats>
-    </user>
-  </users>
+<?xml version="1.0" ?>
+<root nextuserid="8">
+    <users>
+        <user id="1">
+            <forename>Ian</forename>
+            <surname>Trahearn</surname>
+            <username>maddog</username>
+            <email>itrahearn@wiley.com</email>
+            <password>Monday</password>
+            <stats>
+                <stat gametime="20mins" number_of_shots="44" opponent="computer" win="true"/>
+                <stat gametime="40mins" number_of_shots="44" opponent="lewis" win="true"/>
+            </stats>
+        </user>
+        <user id="2">
+            <forename>Lewis</forename>
+            <surname>Trahearn</surname>
+            <username>nelson</username>
+            <email>12TrahearnL@heart-england.co.uk</email>
+            <password>Friday12</password>
+            <stats>
+                <stat gametime="20mins" number_of_shots="44" opponent="computer" win="true"/>
+                <stat gametime="40mins" number_of_shots="44" opponent="lewis" win="true"/>
+            </stats>
+        </user>
+        <user id="3">
+            <forename>stuart</forename>
+            <surname>trahearn</surname>
+            <username>stu</username>
+            <email>12trahearns@heart-england.co.uk</email>
+            <password>douglas123</password>
+            <stats/>
+        </user>
+        <user id="4">
+            <forename>stuart</forename>
+            <surname>trahearn</surname>
+            <username>stu</username>
+            <email>12trahearns@heart-england.co.uk</email>
+            <password>douglas123</password>
+            <stats/>
+        </user>
+        <user id="5">
+            <forename>jack</forename>
+            <surname>ripper</surname>
+            <username>ripper10</username>
+            <email>Jack@gmail.com</email>
+            <password>ripper</password>
+            <stats/>
+        </user>
+        <user id="6">
+            <forename>june</forename>
+            <surname>whitfield</surname>
+            <username>terri</username>
+            <email>june@X.com</email>
+            <password>password</password>
+            <stats/>
+        </user>
+        <user id="7">
+            <forename>mickey</forename>
+            <surname>mouse</surname>
+            <username>disney12</username>
+            <email>walt@gmail.com</email>
+            <password>walter</password>
+            <stats/>
+        </user>
+    </users>
 </root>

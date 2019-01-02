@@ -25,6 +25,7 @@
     <Compile Include="battleships_game.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DataAcessLayer.py" />
     <Compile Include="login.py">
       <SubType>Code</SubType>
     </Compile>
@@ -45,6 +46,7 @@
     <Compile Include="splashscreen.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="testXML.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\" />
@@ -55,7 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AppData\Database.xml" />
+    <Content Include="AppData\test.xml" />
     <Content Include="design_files\bATTLESHIPS.psd" />
+    <Content Include="design_files\LoginScreen.psd" />
     <Content Include="design_files\Register.psd" />
     <Content Include="design_files\splashscreen.psd" />
     <Content Include="design_files\USS-Carl-Vinson-US-Navy.psd" />
@@ -74,6 +78,7 @@
     <Content Include="images\crossout.png" />
     <Content Include="images\explosion.png" />
     <Content Include="images\explosion_miss.png" />
+    <Content Include="images\LoginScreen.png" />
     <Content Include="images\MenuPointer.png" />
     <Content Include="images\Next.png" />
     <Content Include="images\Register.png" />

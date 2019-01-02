@@ -27,10 +27,12 @@ Author:
 
 
 import splashscreen as ss
+import DataAcessLayer as DataAccessLayer
 import login as LoginScreen
 import Register as RegisterScreen 
 from navigate import Navigate
 
+import testXML
 
 class BattleshipsGame():
     """
@@ -49,14 +51,15 @@ class BattleshipsGame():
     """
 
     def __init__(self):
-        pass
+        self._dal = DataAccessLayer.DataAccessLayer()
+
 
     def _login(self):
-        login = LoginScreen.Login(0, 0, 1280, 1024)
+        login = LoginScreen.Login(0, 0, 1280, 1024, self._dal)
         return login.display() 
 
     def _register(self):
-        register = RegisterScreen.Register(0, 0, 1280, 1024)
+        register = RegisterScreen.Register(0, 0, 1280, 1024, self._dal)
         return register.display()
 
 
@@ -80,6 +83,9 @@ class BattleshipsGame():
 
             if where_next == Navigate.REGISTER:
                 where_next = self._register()
+
+            if where_next == Navigate.OPTIONS:
+                break
 
                
 

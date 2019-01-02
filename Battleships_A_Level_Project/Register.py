@@ -84,7 +84,7 @@ class Register():
 
 
     """
-    def __init__(self, x1, y1, w, h):
+    def __init__(self, x1, y1, w, h, dal):
         """ 
         Constructor - passes dimension of screen size.
 
@@ -94,6 +94,7 @@ class Register():
         w - width
         h - height
         """
+        self._dal = dal
         self._yellow = (250,   167,   74)
         self._red = (255,   0,   0)
         self._form = []
@@ -111,6 +112,28 @@ class Register():
         self._facade = Facade.facade_layer()
         self._submit_button = Rect(443,904,176,47)
         self._cancel_button = Rect(683,906,187,46)
+
+
+    def _create_user(self):
+        return_val = True
+
+        try:
+            #taking the inputs (strings) from the text input objects
+            forename = self._form[0].textinput.get_text()
+            surname = self._form[1].textinput.get_text()
+            username = self._form[2].textinput.get_text()
+            email = self._form[3].textinput.get_text()
+            password = self._form[4].textinput.get_text()
+            self._dal.create_user(forename, surname, username, email, password)
+            self._dal.is_user_valid(username, password)
+        except:
+            return_val = False
+            self._validation_messages.clear()
+            self._validation_messages.append("Registration failed please try again")
+        
+        return return_val
+
+
 
     def display(self):
         """ """
@@ -140,7 +163,8 @@ class Register():
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     if self._submit_button.collidepoint(pos) == True:
                         if self._is_register_valid(screen) == True:
-                            return Navigate.OPTIONS
+                            if self._create_user() == True:
+                                return Navigate.OPTIONS
 
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     if self._cancel_button.collidepoint(pos) == True:
