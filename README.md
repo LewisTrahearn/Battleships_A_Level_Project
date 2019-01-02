@@ -11,9 +11,10 @@ It keeps scores in order to add an element of competition and generates random c
 game boards, so that each game is a unique challenge to the students.
 
 The technologies used in writing this are as follows:
-- Python (Computer Language)
+- Python 3.5  (Computer Language)
 - Visual Studio 2017 for the IDE
 - Coding Standards use PEP 8 standard (https://www.python.org/dev/peps/pep-0008/#class-names)
+- pylint as a source code checker. it uses PEP 8 standard as a default.
 - Object Orientated Programming Techniques as the programing style 
 - Pygame - as the gaming library
 - Photoshop for the screen designs
