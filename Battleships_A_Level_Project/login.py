@@ -67,7 +67,7 @@ class Login():
 
 
     """
-    def __init__(self, x1, y1, w, h):
+    def __init__(self, x1, y1, w, h, dal):
         """ 
         Constructor - passes dimension of screen size.
 
@@ -77,7 +77,7 @@ class Login():
         w - width
         h - height
         """
-
+        self._dal = dal
         self._form = []
         self._form_index = 0
         self._text_color = (22, 22, 54)
@@ -86,12 +86,13 @@ class Login():
         self._screen_size = Rect(x1, y1, w, h)
 
         self._facade = Facade.facade_layer()
-        self._submit_button = Rect(542,553,206,58)
+        self._submit_button = Rect(426,656,207,58)
+        self._cancel_button = Rect(686,662,207,58)
 
 
     def display(self):
         """ """
-        screen, background, clock = self._facade.initialise_screen("battleships", "login.png", self._screen_size)
+        screen, background, clock = self._facade.initialise_screen("battleships", "loginScreen.png", self._screen_size)
 
         self._build_form()
 
@@ -118,6 +119,12 @@ class Login():
                     if self._submit_button.collidepoint(pos) == True:
                         if self._is_login_valid() == True:
                             return Navigate.OPTIONS
+
+                if event.type == pygame.MOUSEBUTTONDOWN:
+                    if self._cancel_button.collidepoint(pos) == True:
+                        return Navigate.SPLASHSCREEN
+            
+
             
             screen.blit(background, (0, 0))
 
@@ -137,7 +144,7 @@ class Login():
 
         self._username = self._form[0].textinput.get_text()
         self._password = self._form[1].textinput.get_text()
-        if self._username == "itrahearn" and  self._password == "maddog":
+        if self._dal.is_user_valid(self._username, self._password):
             return_value = True
 
         return return_value
@@ -149,8 +156,8 @@ class Login():
         self._password = pygame_textinput.TextInput('tahoma', 30, True, self._text_color, self._text_color, 400, 35)
         # now create a field object for each one and add it to the forms array
         
-        self._form.append(Field("username", self._username, 515, 382))
-        self._form.append(Field("password", self._password, 515, 465))
+        self._form.append(Field("username", self._username, 444, 345))
+        self._form.append(Field("password", self._password, 444, 474))
 
         # now set the index of the form that should be input first
         self._form_index = 0
