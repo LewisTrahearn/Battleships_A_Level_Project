@@ -3,7 +3,16 @@ Module Name:
     DataAccessLayer.py
 
 Functions/Methods:
-    
+    _username                 - the username of the player
+    _forename                 - the forenmame of the player
+    _surname                  - the surname of the player
+    _email                    - the users email address
+    _password                 - the password of the player
+    _get_logged_user_player_1 - checks the login status of player 1
+    _get_logged_user_player_2 - checks the login status of player 2
+    _write_database           - writes the inputted data to the database
+    _is_user_valid            - validates the input of the user
+    _get_next_db_id           - gives the next database id for a new user so they are saved with different ID's
 
 Class:
    DataAccessLayer
@@ -13,6 +22,8 @@ Class:
 Imports:
     xml.etree.ElementTree - the python XML library    
     os - the operating system, pthon library
+    xml.dom
+    minidom
 
 Purpose:
     Because the application we are writing is standalone we are not using a database, 
