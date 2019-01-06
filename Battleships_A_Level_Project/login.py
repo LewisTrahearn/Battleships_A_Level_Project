@@ -1,6 +1,6 @@
 """
 Module Name:
-    splashscreen.py
+    register.py
 
 Functions/Methods:
     display
