@@ -26,6 +26,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DataAcessLayer.py" />
+    <Compile Include="GameBoard.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="login.py">
       <SubType>Code</SubType>
     </Compile>
@@ -39,6 +42,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="menuPointer.py" />
+    <Compile Include="Options.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="optionsMenu.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="pygame_textinput.py" />
     <Compile Include="Register.py">
       <SubType>Code</SubType>
@@ -74,14 +83,36 @@
     <Content Include="fonts\OFL.txt" />
     <Content Include="fonts\PirataOne-Regular.ttf" />
     <Content Include="fonts\Pirate Ship.ttf" />
-    <Content Include="images\bATTLESHIPS.png" />
+    <Content Include="images\BATTLESHIPS.png" />
+    <Content Include="images\battleship_Options_leftbar.png" />
     <Content Include="images\crossout.png" />
+    <Content Include="images\edit_button.png" />
     <Content Include="images\explosion.png" />
     <Content Include="images\explosion_miss.png" />
+    <Content Include="images\help_button_off.png" />
+    <Content Include="images\help_button_on.png" />
+    <Content Include="images\instructions_box_opponent.png" />
+    <Content Include="images\instructions_box_profile.png" />
+    <Content Include="images\instructions_box_ships_log.png" />
+    <Content Include="images\instructions_box_simulation.png" />
     <Content Include="images\LoginScreen.png" />
+    <Content Include="images\login_button.png" />
     <Content Include="images\MenuPointer.png" />
     <Content Include="images\Next.png" />
+    <Content Include="images\opponent_button_off.png" />
+    <Content Include="images\opponent_button_on.png" />
+    <Content Include="images\opponent_selected_screen.png" />
+    <Content Include="images\play_button.png" />
+    <Content Include="images\profile_button_off.png" />
+    <Content Include="images\profile_button_on.png" />
+    <Content Include="images\quit_button_off.png" />
+    <Content Include="images\quit_button_on.png" />
     <Content Include="images\Register.png" />
+    <Content Include="images\ships_log_button_off.png" />
+    <Content Include="images\ships_log_button_on.png" />
+    <Content Include="images\simulation_button_off.png" />
+    <Content Include="images\simulation_button_on.png" />
+    <Content Include="images\simulation_selected_screen.png" />
     <Content Include="images\splashscreen.png" />
     <Content Include="images\splashscreen_8bit.png" />
     <Content Include="images\login.png" />

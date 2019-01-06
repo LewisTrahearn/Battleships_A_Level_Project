@@ -125,14 +125,14 @@ class facade_layer(object):
         
         screen.blit( textImg, textImgRect)
 
-    def DrawStringArchivoNarrow(self,screen, s, x, y, fg, bg  ):
+    def DrawStringArchivoNarrow(self,screen, s, x, y, fg, bg, font_size = 21  ):
 
         
         file = "ArchivoNarrow-Regular.ttf"
         main_dir = os.path.split(os.path.abspath(__file__))[0]
         file = os.path.join(main_dir, 'fonts', file)
 
-        font = pygame.font.Font(file, 21)
+        font = pygame.font.Font(file, font_size)
         #font.set_bold(True)
 
         textImg = font.render(s,1,fg, bg).convert_alpha(screen)

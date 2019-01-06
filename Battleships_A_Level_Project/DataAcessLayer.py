@@ -41,7 +41,7 @@ from xml.dom import minidom
 
 class loggedInUser(object):
     """ """
-    def __init__(self, id, forename, surname, username, email, password):
+    def __init__(self, id="", forename="", surname="", username="", email="", password=""):
         self._id = id
         self._forename = forename
         self._surname = surname
@@ -50,24 +50,52 @@ class loggedInUser(object):
         self._password = password
 
     @property
+    def id(self):
+        return self._id
+    
+    @id.setter
+    def id(self,value):
+        self._id = value
+
+    @property
     def forename(self):
         return self._forename
+    
+    @forename.setter
+    def forename(self,value):
+        self._forename = value
 
     @property
     def surname(self):
         return self._surname
 
+    @surname.setter
+    def surname(self,value):
+        self._surname = value
+
     @property
     def username(self):
         return self._username
+
+    @username.setter
+    def username(self,value):
+        self._username = value
 
     @property
     def email(self):
         return self._email
 
+    @email.setter
+    def email(self,value):
+        self._email = value
+
     @property
     def password(self):
-        return self.password
+        return self._password
+
+    @password.setter
+    def password(self,value):
+        self._password = value
 
 class DataAccessLayer():
     def __init__(self):
@@ -84,6 +112,11 @@ class DataAccessLayer():
 
     def get_logged_user_player_2(self):
         return self._logged_in_user_player_2
+    def is_player_two_logged_in(self):
+        if self._logged_in_user_player_2 != None:
+            return True
+        else:
+            return False
 
     def is_user_valid(self, username, password, player=1):
         return_value = False
@@ -165,3 +198,23 @@ class DataAccessLayer():
 
         with open(self._file, "w") as f:
             f.write(output)
+
+    def update_logged_in_player_1(self, logged_in_user):
+        return_value = None
+        # check that the updated user is player 1 only
+        if logged_in_user._id["id"] == self._logged_in_user_player_1._id["id"]:
+            id = logged_in_user._id["id"]
+            xpath = xpath_search_string = "users/user[@id=\"{}\"]".format(id) 
+            
+            xml_node_list = self._root.findall(xpath)
+            # findall returns a list of elements and in this
+            # case we are only interested in the first 1.
+
+            if xml_node_list[0] != None:
+        #        strforename = xml_node_list[0].find("forename").text
+                xml_node_list[0].find("forename").text = logged_in_user.forename
+                xml_node_list[0].find("surname").text = logged_in_user.surname
+                xml_node_list[0].find("username").text = logged_in_user.username
+                xml_node_list[0].find("email").text = logged_in_user.email
+                xml_node_list[0].find("password").text = logged_in_user.password
+                self._write_database()

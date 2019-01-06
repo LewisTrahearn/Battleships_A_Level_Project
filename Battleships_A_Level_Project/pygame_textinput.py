@@ -145,6 +145,9 @@ class TextInput:
     def get_text(self):
         return self.input_string
 
+    def set_text(self, text):
+        self.input_string = text
+
     def get_cursor_position(self):
         return self.cursor_position
 
@@ -153,3 +156,6 @@ class TextInput:
 
     def set_cursor_color(self, color):
         self.cursor_surface.fill(color)
+
+    def refresh_field_display(self):
+         self.surface = self.font_object.render(self.input_string, self.antialias, self.text_color)

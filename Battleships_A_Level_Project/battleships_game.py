@@ -31,7 +31,7 @@ import DataAcessLayer as DataAccessLayer
 import login as LoginScreen
 import Register as RegisterScreen 
 from navigate import Navigate
-
+import Options as OptionsScreen
 import testXML
 
 class BattleshipsGame():
@@ -68,6 +68,12 @@ class BattleshipsGame():
         where_next = splash.display()
         return where_next
 
+    def _options(self):
+        option = OptionsScreen.Options(0, 0, 1280, 1024, self._dal)
+        where_next = option.display()
+        return where_next
+
+
 
     def play_game(self):
        
@@ -85,7 +91,7 @@ class BattleshipsGame():
                 where_next = self._register()
 
             if where_next == Navigate.OPTIONS:
-                break
+                where_next = self._options()
 
                
 
