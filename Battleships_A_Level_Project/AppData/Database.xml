@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<root nextuserid="8">
+<root nextuserid="11">
     <users>
         <user id="1">
             <forename>Ian</forename>
@@ -61,6 +61,30 @@
             <username>disney12</username>
             <email>walt@gmail.com</email>
             <password>walter</password>
+            <stats/>
+        </user>
+        <user id="8">
+            <forename>update</forename>
+            <surname>all</surname>
+            <username>fields</username>
+            <email>hello@x.com</email>
+            <password>king</password>
+            <stats/>
+        </user>
+        <user id="9">
+            <forename>x</forename>
+            <surname>x</surname>
+            <username>x</username>
+            <email>x@x.com</email>
+            <password>x</password>
+            <stats/>
+        </user>
+        <user id="10">
+            <forename>stu</forename>
+            <surname>trajearm</surname>
+            <username>virgin</username>
+            <email>stutra8@gmail.com</email>
+            <password>Monday1</password>
             <stats/>
         </user>
     </users>

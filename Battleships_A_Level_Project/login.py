@@ -67,7 +67,7 @@ class Login():
 
 
     """
-    def __init__(self, x1, y1, w, h, dal):
+    def __init__(self, x1, y1, w, h, dal, player = 1):
         """ 
         Constructor - passes dimension of screen size.
 
@@ -84,6 +84,7 @@ class Login():
         self._username = None
         self._password = None
         self._screen_size = Rect(x1, y1, w, h)
+        self._player = player
 
         self._facade = Facade.facade_layer()
         self._submit_button = Rect(426,656,207,58)
@@ -144,7 +145,7 @@ class Login():
 
         self._username = self._form[0].textinput.get_text()
         self._password = self._form[1].textinput.get_text()
-        if self._dal.is_user_valid(self._username, self._password):
+        if self._dal.is_user_valid(self._username, self._password,self._player):
             return_value = True
 
         return return_value

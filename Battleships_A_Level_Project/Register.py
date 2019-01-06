@@ -33,6 +33,8 @@ from navigate import Navigate
 
 import facade_layer as Facade
 
+import DataAcessLayer as DataAccessLayer
+
 
 import pygame_textinput 
 
@@ -84,7 +86,7 @@ class Register():
 
 
     """
-    def __init__(self, x1, y1, w, h, dal):
+    def __init__(self, x1, y1, w, h, dal, profile_mode = False):
         """ 
         Constructor - passes dimension of screen size.
 
@@ -94,6 +96,7 @@ class Register():
         w - width
         h - height
         """
+        self._profile_mode = profile_mode
         self._dal = dal
         self._yellow = (250,   167,   74)
         self._red = (255,   0,   0)
@@ -134,12 +137,45 @@ class Register():
         return return_val
 
 
+    def _update_user(self):
+        return_val = True
+
+        try:
+
+            user_to_update = DataAccessLayer.loggedInUser()
+
+            #taking the inputs (strings) from the text input objects
+            forename = self._form[0].textinput.get_text()
+            surname = self._form[1].textinput.get_text()
+            username = self._form[2].textinput.get_text()
+            email = self._form[3].textinput.get_text()
+            password = self._form[4].textinput.get_text()
+
+
+            user_to_update.forename = forename
+            user_to_update.surname = surname
+            user_to_update.username = username
+            user_to_update.email = email
+            user_to_update.password = password
+
+            user_to_update.id = self._dal.get_logged_user_player_1().id
+
+            self._dal.update_logged_in_player_1(user_to_update)
+        except Exception as inst:
+            return_val = False
+            self._validation_messages.clear()
+            self._validation_messages.append("Update registration failed please try again")
+        
+        return return_val
+
+
+
 
     def display(self):
         """ """
         screen, background, clock = self._facade.initialise_screen("battleships", "register.png", self._screen_size)
 
-        self._build_form()
+        self._build_form(screen)
 
         ################################################
         # This is the main gaming loop for this screen
@@ -163,8 +199,12 @@ class Register():
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     if self._submit_button.collidepoint(pos) == True:
                         if self._is_register_valid(screen) == True:
-                            if self._create_user() == True:
-                                return Navigate.OPTIONS
+                            if self._profile_mode == False:
+                                if self._create_user() == True:
+                                    return Navigate.OPTIONS
+                            else:
+                                if self._update_user() == True:
+                                    return Navigate.OPTIONS
 
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     if self._cancel_button.collidepoint(pos) == True:
@@ -267,7 +307,7 @@ class Register():
             
 
 
-    def _build_form(self):
+    def _build_form(self,screen):
         """ """
         self._username = pygame_textinput.TextInput('tahoma', 30, True, self._text_color, self._text_color, 400, 35)
         self._password = pygame_textinput.TextInput('tahoma', 30, True, self._text_color, self._text_color, 400, 35)
@@ -285,6 +325,19 @@ class Register():
         self._form.append(Field("confirm ", self._confirm , 429, 797))
         # now set the index of the form that should be input first
         self._form_index = 0
+
+        #if the mode is profile mode, then set text inputs with player 1 details.
+        if self._profile_mode == True:
+            self._form[0].textinput.set_text(self._dal.get_logged_user_player_1().forename)
+            self._form[1].textinput.set_text(self._dal.get_logged_user_player_1().surname)
+            self._form[2].textinput.set_text(self._dal.get_logged_user_player_1().username)
+            self._form[3].textinput.set_text(self._dal.get_logged_user_player_1().email)
+            self._form[4].textinput.set_text(self._dal.get_logged_user_player_1().password)
+            
+            # Blit its surface onto the screen
+            for fld in self._form:
+                fld.textinput.refresh_field_display()
+
 
 
     def _process_form(self, screen, events):
