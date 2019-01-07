@@ -21,8 +21,14 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Allocation.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Battleships_A_Level_Project.py" />
     <Compile Include="battleships_game.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Board.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DataAcessLayer.py" />
@@ -46,6 +52,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="optionsMenu.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="player.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="pygame_textinput.py" />

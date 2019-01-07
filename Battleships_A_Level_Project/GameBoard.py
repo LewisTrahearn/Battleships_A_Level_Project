@@ -6,6 +6,8 @@ from navigate import Navigate
 
 import facade_layer as Facade
 import optionsMenu as Menu
+import Board as Board
+
 
 
 
@@ -58,6 +60,7 @@ class GameBoard(object):
         """ """
         screen, background, clock = self._facade.initialise_screen("battleships", "BATTLESHIPS.png", self._screen_size)
 
+        board = Board.Board(screen)
 
         ################################################
         # This is the main gaming loop for this screen
@@ -79,6 +82,8 @@ class GameBoard(object):
                 pos = pygame.mouse.get_pos()
             
             screen.blit(background, (0, 0))
+
+            board.draw()
 
             
 

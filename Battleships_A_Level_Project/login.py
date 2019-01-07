@@ -132,7 +132,7 @@ class Login():
             
             self._process_form(screen, events)
             # the next statement is important otherwise carriage returns will remain and continue to be processed in the processForm           
-            pygame.event.clear()
+            #pygame.event.clear()
 
             pygame.display.update()
 
