@@ -30,11 +30,20 @@ from pygame.locals import *
 from navigate import Navigate
 import facade_layer as Facade
 import DataAcessLayer as DataAccessLayer
+import Board as Board
+import Allocation as Allocation
 
 
-
-
-class player(object):
+class Player(object):
     """description of class"""
+
+    def __init__(self, board, allocation, dal, screen):
+        self._board = board
+        self._allocation = allocation
+        self._dal = dal
+        self._screen = screen
+
+
+        
 
 

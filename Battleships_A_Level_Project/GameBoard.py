@@ -7,7 +7,8 @@ from navigate import Navigate
 import facade_layer as Facade
 import optionsMenu as Menu
 import Board as Board
-
+import Allocation as Allocation
+import player as Player
 
 
 
@@ -62,6 +63,14 @@ class GameBoard(object):
 
         board = Board.Board(screen)
 
+        p1_allocation = Allocation.Allocation()
+        p2_allocation = Allocation.Allocation()
+
+        player1 = Player.Player(board, p2_allocation, self._dal, screen)
+        player2 = Player.Player(board, p1_allocation, self._dal, screen)
+
+
+
         ################################################
         # This is the main gaming loop for this screen
         ################################################
@@ -83,7 +92,10 @@ class GameBoard(object):
             
             screen.blit(background, (0, 0))
 
+            p1_allocation.show_allocation(screen)
+
             board.draw()
+
 
             
 
@@ -91,8 +103,7 @@ class GameBoard(object):
             # the next statement is important otherwise carriage returns will remain and continue to be processed in the processForm           
 
             pygame.display.update()
-
-            
+         
             
             pygame.display.flip()
 
