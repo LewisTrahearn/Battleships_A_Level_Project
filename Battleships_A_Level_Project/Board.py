@@ -83,6 +83,32 @@ class Board(object):
             pygame.draw.line(self._screen, self._WHITE, (290, y), (988,y), line_width)
             y = y + 50
 
+    def user_coords_to_array_coords(self, ux, uy):
+
+        counter = self.x_axis_starting_point
+        for i in range(self._X_AXIS_RANGE):
+            if self.x_axis_labels[counter] == ux:
+                break
+            counter = counter + 1
+        
+        x = i
+
+        counter = self.y_axis_starting_point
+        for i in range(self._Y_AXIS_RANGE):
+            if self.y_axis_labels[counter] == uy:
+                break
+            counter = counter + 1
+        
+        y = i
+        return x,y
+
+
+    def user_coords_to_screen_coords(self, ux, uy):
+        x, y = self.user_coords_to_array_coords( ux, uy)
+        x = (x * self._pixels_per_column) + 290
+        y = (y * self._pixels_per_column) + 212
+        return x,y
+
     def _draw_axes(self):
         start = 290
         line_width = 4
