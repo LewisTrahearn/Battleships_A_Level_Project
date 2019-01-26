@@ -63,13 +63,14 @@ class GameBoard(object):
 
         board = Board.Board(screen)
 
-        p1_allocation = Allocation.Allocation()
-        p2_allocation = Allocation.Allocation()
+        p1_allocation = Allocation.Allocation(1)
+        p2_allocation = Allocation.Allocation(2)
+        
 
         player1 = Player.Player(board, p2_allocation, self._dal, screen)
         player2 = Player.Player(board, p1_allocation, self._dal, screen)
 
-
+        current_player = player1
 
         ################################################
         # This is the main gaming loop for this screen
@@ -92,9 +93,15 @@ class GameBoard(object):
             
             screen.blit(background, (0, 0))
 
-            p1_allocation.show_allocation(screen)
 
-            board.draw()
+            current_player.take_turn(pos, event)
+            if current_player.swap_player == True:
+                current_player.swap_player = False
+                current_player.reset_shot_taken()
+                if current_player.is_player_1 == True:
+                    current_player = player2
+                else:
+                    current_player = player1
 
 
             

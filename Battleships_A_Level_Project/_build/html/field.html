@@ -1,0 +1,248 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Field &#8212; Battleships v1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Gameboard Documentation" href="gameboard.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="field">
+<h1>Field<a class="headerlink" href="#field" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="field-screen">
+<h2>Field Screen<a class="headerlink" href="#field-screen" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/LoginScreen.png"><img alt="alternate text" class="align-center" src="_images/LoginScreen.png" style="width: 640px; height: 480px;" /></a>
+</div>
+<div class="section" id="module-login">
+<span id="class-documentation"></span><h2>Class Documentation<a class="headerlink" href="#module-login" title="Permalink to this headline">¶</a></h2>
+<p>Module Name:</p>
+<blockquote>
+<div>login.py</div></blockquote>
+<p>Public Functions/Methods:</p>
+<blockquote>
+<div>display</div></blockquote>
+<dl class="docutils">
+<dt>Class:</dt>
+<dd>Field - This is a container class used to hold each form control
+Login - This is the main login class used to load the screen and handle the login process</dd>
+</dl>
+<p>Imports:</p>
+<blockquote>
+<div><p><strong>import pygame</strong>   - pygame library.</p>
+<p><strong>pygame.locals</strong>   - this is needed for the Rect definition.</p>
+<p><strong>enum_navigate</strong>   - common enumeration values shared across all classes.</p>
+<p><strong>facade_layer</strong>    - an abstraction from the pygame module, for certain common functions.</p>
+<p><strong>Navigate</strong>        - This class is an enumeration class that holds all the options required to move around the system.</p>
+<p><strong>pygame_textinput</strong> - a 3rd party text input class that allows text input</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>Purpose:</dt>
+<dd><p class="first">This module contains two classes the Field class and the Login class.
+The login class is used to load the screen, build a form, get the
+user input and then call the data access layer in order to determine
+if its correct or not.</p>
+<p class="last">The Field class a a simple container class that allows me to collect the information
+for each input field, such as the x,y coords and instance of the pygame_textinput
+and the name of the field and then put these into an array to allow me to cycle around
+the form.</p>
+</dd>
+<dt>Author:</dt>
+<dd>Lewis Trahearn</dd>
+</dl>
+<dl class="class">
+<dt id="login.Field">
+<em class="property">class </em><code class="descclassname">login.</code><code class="descname">Field</code><span class="sig-paren">(</span><em>fieldname</em>, <em>textinput</em>, <em>x1</em>, <em>y1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/login.html#Field"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#login.Field" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This is a container class for each field within the system</p>
+<dl class="method">
+<dt id="login.Field.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>fieldname</em>, <em>textinput</em>, <em>x1</em>, <em>y1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/login.html#Field.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#login.Field.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the constructor for the class:
+- parameters</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param fieldname:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><ul class="first simple">
+<li>name you wish to call the field</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param textinput:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><ul class="first simple">
+<li>field object</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">param x:</th><td class="field-body"><ul class="first simple">
+<li>the x coordinate of the field</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param y:</th><td class="field-body"><ul class="first last simple">
+<li>the y coordinate of the field</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>type of parameters</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">type fieldname:</th><td class="field-body">string literal</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type textinput:</th><td class="field-body">object pygame_textinput</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type x:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type y:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>return</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">return:</th><td class="field-body">none since its a constructor</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>return type</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">not applicable</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Battleships</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="login.html">Login</a></li>
+<li class="toctree-l1"><a class="reference internal" href="facade.html">Facade Layer Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gameboard.html">Gameboard Documentation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Field</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#field-screen">Field Screen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-login">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="gameboard.html" title="previous chapter">Gameboard Documentation</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Lewis Trahearn.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/field.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

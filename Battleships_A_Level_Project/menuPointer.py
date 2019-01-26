@@ -73,6 +73,7 @@ class MenuPointer():
         self._login_color = 0, 0, 0
         self._register_color = 0, 0, 0
         self._quit_color = 0, 0, 0
+        self._help_color = 0, 0, 0
         self._x = 0
         self._y = 0
         self._selected_option = ""
@@ -84,7 +85,7 @@ class MenuPointer():
         self._login_link = Rect(78, 366, 243, 134)
         self._register_link = Rect(62, 554, 451, 109)
         self._quit_link = Rect(80, 724, 205, 147)
-
+        self._help_link = Rect(80, 824, 205, 147)
 
         self._image = pygame.image.load(self._file).convert_alpha()
  
@@ -95,6 +96,7 @@ class MenuPointer():
         self._move_to_login()
 
         self._facade = Facade.facade_layer()
+        self._help_processed = False
 
     def selected(self, pos):
         
@@ -109,6 +111,11 @@ class MenuPointer():
         if self._quit_link.collidepoint(pos) == True:
             returnVal = Navigate.QUIT_SPLASHSCREEN
 
+        if self._help_processed == False: # this will prevent 100's of windows being opened in browser.
+            if self._help_link.collidepoint(pos) == True:
+                returnVal = Navigate.HELP_SCREEN
+                self._help_processed = True
+
         return returnVal
 
     def process(self, pos):
@@ -116,23 +123,30 @@ class MenuPointer():
         if self._register_link.collidepoint(pos) == True:
             self._move_to_register()
             self._facade.playRolloverSound("register")
+            self._help_processed = False # reset the help
 
 
         if self._login_link.collidepoint(pos) == True:
             self._move_to_login()
             self._facade.playRolloverSound("login")
+            self._help_processed = False
 
 
         if self._quit_link.collidepoint(pos) == True:
             self._move_to_quit()
-            self._facade.playRolloverSound("quit")        
+            self._facade.playRolloverSound("quit")    
+            self._help_processed = False
 
+        if self._help_link.collidepoint(pos) == True:
+            self._move_to_help()
+            self._facade.playRolloverSound("help") 
 
     def _clear_colors(self):
         """ private helper method to reset/clear all colors to black """
         self._login_color = 0, 0, 0
         self._register_color = 0, 0, 0
         self._quit_color = 0, 0, 0
+        self._help_color = 0, 0, 0
 
     def _move_to_login(self):
         """ private method to move the pointer to login position """
@@ -158,12 +172,21 @@ class MenuPointer():
         self._clear_colors()
         self._quit_color = 255, 255, 255
 
+    def _move_to_help(self):
+        """ private method to move the pointer to quit position """
+        self._x = 600
+        self._y = 850
+        self._selected_option = "help"
+        self._clear_colors()
+        self._help_color = 255, 255, 255
+
     def draw(self, screen):
         """ public method to draw the menu to the screen """
 
         self._facade.DrawStringPirateFont(screen, "Login", 85, 320, self._login_color, False)
         self._facade.DrawStringPirateFont(screen, "Register", 85, 500, self._register_color, False)
         self._facade.DrawStringPirateFont(screen, "Quit", 85, 690, self._quit_color, False)
+        self._facade.DrawStringPirateFont(screen, "Help", 85, 850, self._help_color, False)
 
 
         self._rect.x = self._x

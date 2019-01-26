@@ -29,8 +29,10 @@ Author:
 """
 
 import os.path
+
 import pygame
 from pygame.locals import *
+import webbrowser
 
 
 class facade_layer(object):
@@ -63,6 +65,7 @@ class facade_layer(object):
     """
     def __init__(self):
         self.name = ""
+        self._count = 0
 
     def initialise_screen(self, title, image_name, screen_size_rect):
         pygame.init()
@@ -206,3 +209,14 @@ class facade_layer(object):
         textImgRect.y = y
         
         screen.blit( textImg, textImgRect)
+
+
+    def launch_help(self):
+
+        file = "help.html" # this is the home page
+        main_dir = os.path.split(os.path.abspath(__file__))[0]
+        file = os.path.join(main_dir, 'help', file)
+        url = "file:///" + file
+        # open an HTML file on my own (Windows) computer
+        
+        webbrowser.open(url)

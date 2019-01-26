@@ -71,16 +71,21 @@
     <Folder Include="fonts\" />
     <Folder Include="AppData\" />
     <Folder Include="design_files\" />
+    <Folder Include="help\" />
     <Folder Include="Sound\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="all.rst_ignore" />
     <Content Include="AppData\Database.xml" />
     <Content Include="AppData\test.xml" />
+    <Content Include="code.rst_ignore" />
     <Content Include="design_files\bATTLESHIPS.psd" />
     <Content Include="design_files\LoginScreen.psd" />
     <Content Include="design_files\Register.psd" />
     <Content Include="design_files\splashscreen.psd" />
     <Content Include="design_files\USS-Carl-Vinson-US-Navy.psd" />
+    <Content Include="facade.rst" />
+    <Content Include="field.rst" />
     <Content Include="fonts\ArchivoNarrow-Bold.ttf" />
     <Content Include="fonts\ArchivoNarrow-BoldItalic.ttf" />
     <Content Include="fonts\ArchivoNarrow-Italic.ttf" />
@@ -92,6 +97,13 @@
     <Content Include="fonts\OFL.txt" />
     <Content Include="fonts\PirataOne-Regular.ttf" />
     <Content Include="fonts\Pirate Ship.ttf" />
+    <Content Include="gameboard.rst" />
+    <Content Include="help\help.html" />
+    <Content Include="help\help.mp4" />
+    <Content Include="help\help_login.PNG" />
+    <Content Include="help\help_splashscreen.PNG" />
+    <Content Include="help\login.html" />
+    <Content Include="help\register.html" />
     <Content Include="images\BATTLESHIPS.png" />
     <Content Include="images\battleship_Options_leftbar.png" />
     <Content Include="images\crossout.png" />
@@ -125,10 +137,12 @@
     <Content Include="images\splashscreen.png" />
     <Content Include="images\splashscreen_8bit.png" />
     <Content Include="images\login.png" />
+    <Content Include="login.rst" />
     <Content Include="Sound\Explosion+2.mp3" />
     <Content Include="Sound\ExplosionWithSplash.mp3" />
     <Content Include="Sound\Missile+1.mp3" />
     <Content Include="Sound\rollover.mp3" />
+    <Content Include="ToDo.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
