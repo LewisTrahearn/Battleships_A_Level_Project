@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>5de28d57-0a5e-4776-9b7f-100fdfadeaeb</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Battleships_A_Level_Project.py</StartupFile>
+    <StartupFile>main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +21,50 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Allocation.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Battleships_A_Level_Project.py" />
+    <Compile Include="battleships_game.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Board.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAcessLayer.py" />
+    <Compile Include="GameBoard.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="login.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="navigate.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="facade_layer.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="main.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="menuPointer.py" />
+    <Compile Include="Options.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="optionsMenu.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="player.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="pygame_textinput.py" />
+    <Compile Include="Register.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="splashscreen.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="testXML.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\" />
@@ -29,6 +72,63 @@
     <Folder Include="AppData\" />
     <Folder Include="design_files\" />
     <Folder Include="Sound\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppData\Database.xml" />
+    <Content Include="AppData\test.xml" />
+    <Content Include="design_files\bATTLESHIPS.psd" />
+    <Content Include="design_files\LoginScreen.psd" />
+    <Content Include="design_files\Register.psd" />
+    <Content Include="design_files\splashscreen.psd" />
+    <Content Include="design_files\USS-Carl-Vinson-US-Navy.psd" />
+    <Content Include="fonts\ArchivoNarrow-Bold.ttf" />
+    <Content Include="fonts\ArchivoNarrow-BoldItalic.ttf" />
+    <Content Include="fonts\ArchivoNarrow-Italic.ttf" />
+    <Content Include="fonts\ArchivoNarrow-Medium.ttf" />
+    <Content Include="fonts\ArchivoNarrow-MediumItalic.ttf" />
+    <Content Include="fonts\ArchivoNarrow-Regular.ttf" />
+    <Content Include="fonts\ArchivoNarrow-SemiBold.ttf" />
+    <Content Include="fonts\ArchivoNarrow-SemiBoldItalic.ttf" />
+    <Content Include="fonts\OFL.txt" />
+    <Content Include="fonts\PirataOne-Regular.ttf" />
+    <Content Include="fonts\Pirate Ship.ttf" />
+    <Content Include="images\BATTLESHIPS.png" />
+    <Content Include="images\battleship_Options_leftbar.png" />
+    <Content Include="images\crossout.png" />
+    <Content Include="images\edit_button.png" />
+    <Content Include="images\explosion.png" />
+    <Content Include="images\explosion_miss.png" />
+    <Content Include="images\help_button_off.png" />
+    <Content Include="images\help_button_on.png" />
+    <Content Include="images\instructions_box_opponent.png" />
+    <Content Include="images\instructions_box_profile.png" />
+    <Content Include="images\instructions_box_ships_log.png" />
+    <Content Include="images\instructions_box_simulation.png" />
+    <Content Include="images\LoginScreen.png" />
+    <Content Include="images\login_button.png" />
+    <Content Include="images\MenuPointer.png" />
+    <Content Include="images\Next.png" />
+    <Content Include="images\opponent_button_off.png" />
+    <Content Include="images\opponent_button_on.png" />
+    <Content Include="images\opponent_selected_screen.png" />
+    <Content Include="images\play_button.png" />
+    <Content Include="images\profile_button_off.png" />
+    <Content Include="images\profile_button_on.png" />
+    <Content Include="images\quit_button_off.png" />
+    <Content Include="images\quit_button_on.png" />
+    <Content Include="images\Register.png" />
+    <Content Include="images\ships_log_button_off.png" />
+    <Content Include="images\ships_log_button_on.png" />
+    <Content Include="images\simulation_button_off.png" />
+    <Content Include="images\simulation_button_on.png" />
+    <Content Include="images\simulation_selected_screen.png" />
+    <Content Include="images\splashscreen.png" />
+    <Content Include="images\splashscreen_8bit.png" />
+    <Content Include="images\login.png" />
+    <Content Include="Sound\Explosion+2.mp3" />
+    <Content Include="Sound\ExplosionWithSplash.mp3" />
+    <Content Include="Sound\Missile+1.mp3" />
+    <Content Include="Sound\rollover.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

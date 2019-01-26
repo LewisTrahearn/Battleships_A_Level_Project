@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <users>
+    <user>
+      <forename>Ian</forename>
+      <surname>Trahearn</surname>
+      <username>maddog</username>
+      <email></email>
+      <password></password>
+      <stats>
+        <stat gametime="20mins" win="true" opponent="computer" number_of_shots="44" />
+        <stat gametime="40mins" win="true" opponent="lewis" number_of_shots="44" />
+      </stats>
+    </user>
+    <user>
+      <forename>Lewis</forename>
+      <surname>Trahearn</surname>
+      <username>nelson</username>
+      <email></email>
+      <password></password>
+      <stats>
+        <stat gametime="20mins" win="true" opponent="computer" number_of_shots="44" />
+        <stat gametime="40mins" win="true" opponent="lewis" number_of_shots="44" />
+      </stats>
+    </user>
+  </users>
+</root>
