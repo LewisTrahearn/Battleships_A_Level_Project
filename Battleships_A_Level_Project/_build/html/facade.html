@@ -1,0 +1,366 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Facade Layer Documentation &#8212; Battleships v1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Gameboard Documentation" href="gameboard.html" />
+    <link rel="prev" title="Login" href="login.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-facade_layer">
+<span id="facade-layer-documentation"></span><h1>Facade Layer Documentation<a class="headerlink" href="#module-facade_layer" title="Permalink to this headline">¶</a></h1>
+<dl class="docutils">
+<dt>Module Name:</dt>
+<dd>facade_layer.py</dd>
+</dl>
+<p>Functions/Methods:</p>
+<dl class="docutils">
+<dt>Class:</dt>
+<dd>facade_layer - simpler interface to the pygame library.</dd>
+<dt>Imports:</dt>
+<dd>random - allow the generation of random numbers
+os.path - specifically load the namespace os.path so that I can retrieve information about the directory path
+pygame - this is the main game library (<a class="reference external" href="https://www.pygame.org/news">https://www.pygame.org/news</a>)</dd>
+<dt>Purpose:</dt>
+<dd><p class="first">a facade layer is a design pattern within UML (Unified Modelling Language) that allows you to put a simpler
+interface in place for a group of classes.</p>
+<p>In our case the interface I am trying to simplify is a layer between my game logic
+and the pygame library, so where possible I shall put in here common methods
+that are reusable within the battleships game.</p>
+<p class="last">This may not be possible for all things, however it will help simply the game logic.</p>
+</dd>
+<dt>Author:</dt>
+<dd>Lewis Trahearn</dd>
+</dl>
+<dl class="class">
+<dt id="facade_layer.facade_layer">
+<em class="property">class </em><code class="descclassname">facade_layer.</code><code class="descname">facade_layer</code><a class="reference internal" href="_modules/facade_layer.html#facade_layer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#facade_layer.facade_layer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>description:
+a facade layer is a design pattern within UML (Unified Modelling Language) that allows you to put a simpler
+interface in place for a group of classes. Think of it like a multi-tool or a generic library of helper methods.</p>
+<p>In our case the interface I am trying to simplify is a layer between my game logic
+and the pygame library, so where possible I shall put in here common methods
+that are reusable within the battleships game.</p>
+<p>This may not be possible for all things, however it will help simply the game logic.</p>
+<dl class="docutils">
+<dt>attributes:</dt>
+<dd>name - this is used as a control variable to stop the sounds and music from repeating</dd>
+<dt>methods:</dt>
+<dd>__init__(self) - default constructor no parameters required
+loadImage(self,file) - public method to load an image
+DrawString(self,screen, background, s, x, y, fg, bg, font, size, bold) - public method to draw a string of characters to the screen using a system font
+DrawStringPirateFont(self,screen, s, x, y, fg, bg  ) - public method to draw a string to the screen using a pirate font
+DrawStringArchivoNarrow(self,screen, s, x, y, fg, bg  ) public method to draw to the screen using Archivo Narrow font
+playRolloverSound(self,name): - public method to play roll over sound 
+playLaunchSound(self,name) - public method, plys lauch sound of missile
+playExplosionWithSplashSound(self,name) - public method, plays an explosion with a splash sound for a miss
+DrawName(self,screen, s, x, y, fg, bg  ) - used to draw a user name on the screen
+DrawGameOver(self,screen, s, x, y, fg, bg  ) - used to draw the game over message</dd>
+</dl>
+<dl class="method">
+<dt id="facade_layer.facade_layer.DrawGameOver">
+<code class="descname">DrawGameOver</code><span class="sig-paren">(</span><em>screen</em>, <em>s</em>, <em>x</em>, <em>y</em>, <em>fg</em>, <em>bg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/facade_layer.html#facade_layer.DrawGameOver"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#facade_layer.facade_layer.DrawGameOver" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.DrawName">
+<code class="descname">DrawName</code><span class="sig-paren">(</span><em>screen</em>, <em>s</em>, <em>x</em>, <em>y</em>, <em>fg</em>, <em>bg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/facade_layer.html#facade_layer.DrawName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#facade_layer.facade_layer.DrawName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.DrawString">
+<code class="descname">DrawString</code><span class="sig-paren">(</span><em>screen</em>, <em>background</em>, <em>s</em>, <em>x</em>, <em>y</em>, <em>fg</em>, <em>bg</em>, <em>font</em>, <em>size</em>, <em>bold</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/facade_layer.html#facade_layer.DrawString"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#facade_layer.facade_layer.DrawString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.DrawStringArchivoNarrow">
+<code class="descname">DrawStringArchivoNarrow</code><span class="sig-paren">(</span><em>screen</em>, <em>s</em>, <em>x</em>, <em>y</em>, <em>fg</em>, <em>bg</em>, <em>font_size=21</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/facade_layer.html#facade_layer.DrawStringArchivoNarrow"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#facade_layer.facade_layer.DrawStringArchivoNarrow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.DrawStringPirateFont">
+<code class="descname">DrawStringPirateFont</code><span class="sig-paren">(</span><em>screen</em>, <em>s</em>, <em>x</em>, <em>y</em>, <em>fg</em>, <em>bg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/facade_layer.html#facade_layer.DrawStringPirateFont"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#facade_layer.facade_layer.DrawStringPirateFont" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__class__">
+<code class="descname">__class__</code><a class="headerlink" href="#facade_layer.facade_layer.__class__" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">builtins.type</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__delattr__">
+<code class="descname">__delattr__</code><a class="headerlink" href="#facade_layer.facade_layer.__delattr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implement delattr(self, name).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__dict__">
+<code class="descname">__dict__</code><em class="property"> = mappingproxy({'__module__': 'facade_layer', '__init__': &lt;function facade_layer.__init__&gt;, 'DrawStringPirateFont': &lt;function facade_layer.DrawStringPirateFont&gt;, 'playLaunchSound': &lt;function facade_layer.playLaunchSound&gt;, 'DrawStringArchivoNarrow': &lt;function facade_layer.DrawStringArchivoNarrow&gt;, 'DrawGameOver': &lt;function facade_layer.DrawGameOver&gt;, 'playExplosionWithSplashSound': &lt;function facade_layer.playExplosionWithSplashSound&gt;, 'playRolloverSound': &lt;function facade_layer.playRolloverSound&gt;, '__doc__': '\n    description:\n    a facade layer is a design pattern within UML (Unified Modelling Language) that allows you to put a simpler\n    interface in place for a group of classes. Think of it like a multi-tool or a generic library of helper methods. \n\n    In our case the interface I am trying to simplify is a layer between my game logic\n    and the pygame library, so where possible I shall put in here common methods\n    that are reusable within the battleships game.\n\n    This may not be possible for all things, however it will help simply the game logic.\n    \n    attributes:\n        name - this is used as a control variable to stop the sounds and music from repeating\n\n    methods:\n        __init__(self) - default constructor no parameters required\n        loadImage(self,file) - public method to load an image\n        DrawString(self,screen, background, s, x, y, fg, bg, font, size, bold) - public method to draw a string of characters to the screen using a system font\n        DrawStringPirateFont(self,screen, s, x, y, fg, bg  ) - public method to draw a string to the screen using a pirate font\n        DrawStringArchivoNarrow(self,screen, s, x, y, fg, bg  ) public method to draw to the screen using Archivo Narrow font\n        playRolloverSound(self,name): - public method to play roll over sound \n        playLaunchSound(self,name) - public method, plys lauch sound of missile\n        playExplosionWithSplashSound(self,name) - public method, plays an explosion with a splash sound for a miss\n        DrawName(self,screen, s, x, y, fg, bg  ) - used to draw a user name on the screen\n        DrawGameOver(self,screen, s, x, y, fg, bg  ) - used to draw the game over message\n\n    ', '__weakref__': &lt;attribute '__weakref__' of 'facade_layer' objects&gt;, 'DrawName': &lt;function facade_layer.DrawName&gt;, 'launch_help': &lt;function facade_layer.launch_help&gt;, '__dict__': &lt;attribute '__dict__' of 'facade_layer' objects&gt;, 'initialise_screen': &lt;function facade_layer.initialise_screen&gt;, 'DrawString': &lt;function facade_layer.DrawString&gt;, 'loadImage': &lt;function facade_layer.loadImage&gt;})</em><a class="headerlink" href="#facade_layer.facade_layer.__dict__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.__dir__">
+<code class="descname">__dir__</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#facade_layer.facade_layer.__dir__" title="Permalink to this definition">¶</a></dt>
+<dd><p>default dir() implementation</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__eq__">
+<code class="descname">__eq__</code><a class="headerlink" href="#facade_layer.facade_layer.__eq__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return self==value.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.__format__">
+<code class="descname">__format__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#facade_layer.facade_layer.__format__" title="Permalink to this definition">¶</a></dt>
+<dd><p>default object formatter</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__ge__">
+<code class="descname">__ge__</code><a class="headerlink" href="#facade_layer.facade_layer.__ge__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return self&gt;=value.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__getattribute__">
+<code class="descname">__getattribute__</code><a class="headerlink" href="#facade_layer.facade_layer.__getattribute__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return getattr(self, name).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__gt__">
+<code class="descname">__gt__</code><a class="headerlink" href="#facade_layer.facade_layer.__gt__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return self&gt;value.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__hash__">
+<code class="descname">__hash__</code><a class="headerlink" href="#facade_layer.facade_layer.__hash__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return hash(self).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/facade_layer.html#facade_layer.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#facade_layer.facade_layer.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__le__">
+<code class="descname">__le__</code><a class="headerlink" href="#facade_layer.facade_layer.__le__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return self&lt;=value.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__lt__">
+<code class="descname">__lt__</code><a class="headerlink" href="#facade_layer.facade_layer.__lt__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return self&lt;value.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__module__">
+<code class="descname">__module__</code><em class="property"> = 'facade_layer'</em><a class="headerlink" href="#facade_layer.facade_layer.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__ne__">
+<code class="descname">__ne__</code><a class="headerlink" href="#facade_layer.facade_layer.__ne__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return self!=value.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.__new__">
+<code class="descname">__new__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#facade_layer.facade_layer.__new__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create and return a new object.  See help(type) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.__reduce__">
+<code class="descname">__reduce__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#facade_layer.facade_layer.__reduce__" title="Permalink to this definition">¶</a></dt>
+<dd><p>helper for pickle</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.__reduce_ex__">
+<code class="descname">__reduce_ex__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#facade_layer.facade_layer.__reduce_ex__" title="Permalink to this definition">¶</a></dt>
+<dd><p>helper for pickle</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__repr__">
+<code class="descname">__repr__</code><a class="headerlink" href="#facade_layer.facade_layer.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return repr(self).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__setattr__">
+<code class="descname">__setattr__</code><a class="headerlink" href="#facade_layer.facade_layer.__setattr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implement setattr(self, name, value).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.__sizeof__">
+<code class="descname">__sizeof__</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#facade_layer.facade_layer.__sizeof__" title="Permalink to this definition">¶</a></dt>
+<dd><p>size of object in memory, in bytes</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__str__">
+<code class="descname">__str__</code><a class="headerlink" href="#facade_layer.facade_layer.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.__subclasshook__">
+<code class="descname">__subclasshook__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#facade_layer.facade_layer.__subclasshook__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstract classes can override this to customize issubclass().</p>
+<p>This is invoked early on by abc.ABCMeta.__subclasscheck__().
+It should return True, False or NotImplemented.  If it returns
+NotImplemented, the normal algorithm is used.  Otherwise, it
+overrides the normal algorithm (and the outcome is cached).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#facade_layer.facade_layer.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.initialise_screen">
+<code class="descname">initialise_screen</code><span class="sig-paren">(</span><em>title</em>, <em>image_name</em>, <em>screen_size_rect</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/facade_layer.html#facade_layer.initialise_screen"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#facade_layer.facade_layer.initialise_screen" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.launch_help">
+<code class="descname">launch_help</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/facade_layer.html#facade_layer.launch_help"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#facade_layer.facade_layer.launch_help" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.loadImage">
+<code class="descname">loadImage</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/facade_layer.html#facade_layer.loadImage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#facade_layer.facade_layer.loadImage" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.playExplosionWithSplashSound">
+<code class="descname">playExplosionWithSplashSound</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/facade_layer.html#facade_layer.playExplosionWithSplashSound"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#facade_layer.facade_layer.playExplosionWithSplashSound" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.playLaunchSound">
+<code class="descname">playLaunchSound</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/facade_layer.html#facade_layer.playLaunchSound"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#facade_layer.facade_layer.playLaunchSound" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.playRolloverSound">
+<code class="descname">playRolloverSound</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/facade_layer.html#facade_layer.playRolloverSound"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#facade_layer.facade_layer.playRolloverSound" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Battleships</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="login.html">Login</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Facade Layer Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gameboard.html">Gameboard Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="field.html">Field</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="login.html" title="previous chapter">Login</a></li>
+      <li>Next: <a href="gameboard.html" title="next chapter">Gameboard Documentation</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Lewis Trahearn.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/facade.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

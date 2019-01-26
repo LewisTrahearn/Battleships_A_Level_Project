@@ -34,4 +34,5 @@ class Navigate(Enum):
     MAIN_GAME = 5
     HIGHSCORES = 6
     QUIT_SPLASHSCREEN = 7
+    HELP_SCREEN = 8
 

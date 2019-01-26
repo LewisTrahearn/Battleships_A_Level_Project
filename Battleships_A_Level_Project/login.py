@@ -1,24 +1,40 @@
-"""
-Module Name:
-    register.py
 
-Functions/Methods:
+r"""Module Name:
+
+    login.py
+
+Public Functions/Methods:
+
     display
 
 Class:
-    SplashScreen
+    Field - This is a container class used to hold each form control
+    Login - This is the main login class used to load the screen and handle the login process
 
 Imports:
-    enum_navigate - common enumeration values shared across all classes
-    facade_layer - an abstraction from the pygame module, for certain common functions
-    import pygame - pygame library
-    pygame.locals - this is needed for the Rect definition
+
+    **import pygame**   - pygame library.
+
+    **pygame.locals**   - this is needed for the Rect definition.
+
+    **enum_navigate**   - common enumeration values shared across all classes.
+
+    **facade_layer**    - an abstraction from the pygame module, for certain common functions.
+
+    **Navigate**        - This class is an enumeration class that holds all the options required to move around the system.
+    
+    **pygame_textinput** - a 3rd party text input class that allows text input
 
 Purpose:
-    This class represents the splashscreen that will introduce the user to the game
-    and give them the options of either logging in, registering themselves in the game 
-    or quitting.
-  
+    This module contains two classes the Field class and the Login class.
+    The login class is used to load the screen, build a form, get the
+    user input and then call the data access layer in order to determine
+    if its correct or not.
+
+    The Field class a a simple container class that allows me to collect the information
+    for each input field, such as the x,y coords and instance of the pygame_textinput
+    and the name of the field and then put these into an array to allow me to cycle around
+    the form.
     
 Author:
     Lewis Trahearn
@@ -26,18 +42,33 @@ Author:
 """
 import pygame
 from pygame.locals import *
-
-
 from navigate import Navigate
-
 import facade_layer as Facade
-
-
 import pygame_textinput 
 
 class Field():
-    """Container class for each field"""
+    """
+    This is a container class for each field within the system
+    """
+
     def __init__(self, fieldname, textinput, x1, y1):
+        """This is the constructor for the class:
+            - parameters 
+                :param fieldname:    - name you wish to call the field
+                :param textinput:    - field object
+                :param x:            - the x coordinate of the field
+                :param y:            - the y coordinate of the field
+            - type of parameters
+                :type fieldname: string literal
+                :type textinput: object pygame_textinput 
+                :type x: int 
+                :type y: int 
+            - return
+                :return: none since its a constructor
+            - return type
+                :rtype: not applicable
+
+        """
         self.fieldname = fieldname
         self.textinput = textinput
         self.x1 = x1
@@ -52,8 +83,8 @@ class Login():
         or quitting.
     
     attributes:
-        _screen_size    private variable, defines screen size as passed in to the constructor of the class
-        _login_link     private variable that defines a screen area that is deemed to be selected.
+        _screen_size    private variable, defines screen size as passed in to the constructor of the class\n
+        _login_link     private variable that defines a screen area that is deemed to be selected.\n
         _register_link  private variable that defines a screen area that is deemed to be selected.
         _quit_link      private variable that defines a screen area that is deemed to be selected.
  
@@ -126,18 +157,13 @@ class Login():
                         return Navigate.SPLASHSCREEN
             
 
-            
             screen.blit(background, (0, 0))
 
             
             self._process_form(screen, events)
-            # the next statement is important otherwise carriage returns will remain and continue to be processed in the processForm           
-            #pygame.event.clear()
 
             pygame.display.update()
 
-            
-            
             pygame.display.flip()
 
     def _is_login_valid(self):

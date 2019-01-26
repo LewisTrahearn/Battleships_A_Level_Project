@@ -1,0 +1,47 @@
+Auto Generated Documentation
+============================
+
+.. automodule:: facade_layer
+	:members:
+
+.. automodule:: login
+	:members:
+
+.. automodule::  battleships_game.py
+	:members:
+
+.. automodule::  Board.py
+	:members:
+
+.. automodule::  conf.py
+	:members:
+
+.. automodule::  DataAcessLayer.py
+	:members:
+
+.. automodule::  GameBoard.py
+	:members:
+
+.. automodule::  menuPointer.py
+	:members:
+
+.. automodule::  navigate.py
+	:members:
+
+.. automodule::  Options.py
+	:members:
+
+.. automodule::  optionsMenu.py
+	:members:
+
+.. automodule::  player.py
+	:members:
+
+.. automodule::  pygame_textinput.py
+	:members:
+
+.. automodule::  Register.py
+	:members:
+
+.. automodule::  splashscreen.py
+	:members:

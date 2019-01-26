@@ -23,5 +23,12 @@ Author:
 
 import battleships_game as battleships_control_class
 
-game = battleships_control_class.BattleshipsGame()
-game.play_game()
+class runme():
+    def __init__(self):
+        game = battleships_control_class.BattleshipsGame()
+        game.play_game()
+
+
+
+if __name__ == "__main__":
+    runme()

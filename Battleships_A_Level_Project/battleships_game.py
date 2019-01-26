@@ -32,6 +32,7 @@ import login as LoginScreen
 import Register as RegisterScreen 
 from navigate import Navigate
 import Options as OptionsScreen
+import facade_layer as Facade
 import testXML
 
 class BattleshipsGame():
@@ -52,7 +53,11 @@ class BattleshipsGame():
 
     def __init__(self):
         self._dal = DataAccessLayer.DataAccessLayer()
+        self._facade = Facade.facade_layer()
 
+
+    def _help(self):
+        self._facade.launch_help()
 
     def _login(self):
         login = LoginScreen.Login(0, 0, 1280, 1024, self._dal)
@@ -92,6 +97,14 @@ class BattleshipsGame():
 
             if where_next == Navigate.OPTIONS:
                 where_next = self._options()
+            
+            if where_next == Navigate.QUIT_SPLASHSCREEN:
+                break
+
+            if where_next == Navigate.HELP_SCREEN:
+                self._help()
+                where_next = Navigate.SPLASHSCREEN
+                
 
                
 

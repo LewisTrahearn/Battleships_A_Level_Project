@@ -1,0 +1,29 @@
+1. add logic to finish game 
+2. add logic to update XML file with stats 
+3. create ships log screen
+4. implement cpu logic 
+5. help screens
+6. documentation
+7. names at the top of the game screen
+
+
+changes within this branch:
+
+Implemented Help
+	new help folder
+	uses html5, JQUERY and BOOTSTRAP for CSS library
+	created my own video for the help screen using adobe after effects
+
+Implemented Sphinx auto documentation tool
+made changes to:
+	board class
+	facade layer
+	login
+	gameboard
+	main - although this was only because I was trying to get the documenter working
+
+Added:
+	Most of the other added files are to do with auto generation of documentation
+	this includes the .rst files to define what we want. This then auto generates
+	the _build will all the help documentation.
+
