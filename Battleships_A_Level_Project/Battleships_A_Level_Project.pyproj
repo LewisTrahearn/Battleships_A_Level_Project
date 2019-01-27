@@ -142,7 +142,6 @@
     <Content Include="Sound\ExplosionWithSplash.mp3" />
     <Content Include="Sound\Missile+1.mp3" />
     <Content Include="Sound\rollover.mp3" />
-    <Content Include="ToDo.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

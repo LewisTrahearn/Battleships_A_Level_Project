@@ -2,13 +2,13 @@ SATURDAY
 1. add logic to finish game - EASY AMOUNT OF WORK
 7. names at the top of the game screen
 
-SUNDAY
-2. add logic to update XML file with stats - MEDIUM AMOUNT WORK
 
-SUNDAY - START
+
+SUNDAY 
 4. implement cpu logic - MEDIUM/LARGE
 
 NEXT COMPLETE
+2. add logic to update XML file with stats - MEDIUM AMOUNT WORK
 8. create ships log screen - LARGE AMOUNT
 
 
