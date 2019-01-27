@@ -93,6 +93,10 @@ class Allocation(object):
         self._submarine_lives = 4
         self._destroyer_lives = 2
 
+        ### set these intiall to -1 to indicate we have not yet had a shot
+        self._last_shot_row = -1
+        self._last_shot_col = -1
+
     def is_battleship_destroyed(self):
         return_value = False
         if self._battleship_lives <= 0:
@@ -200,8 +204,14 @@ class Allocation(object):
     def get_square_value(self,row,col):
         return self._board[row][col]
 
+    def _reset_last_shot(self):
+       self._last_shot_row = -1
+       self.__last_shot_row = -1
+   
     def set_square_value_kill(self,row,col):
         self._board[row][col] = "K"
+        self._last_shot_row = row
+        self._last_shot_col = col
         self._facade.playLaunchSound("launch")
 
     def set_square_value_miss(self,row,col):
@@ -258,6 +268,42 @@ class Allocation(object):
         for height in range(self.BOARD_HEIGHT):
             for width in range(self.BOARD_WIDTH):
                 board[height][width] = '_'
+
+
+    def get_random_position(self):
+        
+        #_control_x_col and _control_y_row
+        while True:
+            col = randint(0,13)
+            row = randint(0,11)
+            if self._board[row][col] != self.SQUARE_HIT and self._board[row][col] != self.SQUARE_MISS:
+                break
+
+        return col,row
+
+    
+    def was_previous_shot_a_hit(self):
+        return_value = False
+        if self._board[self._last_shot_row][self._last_shot_col] == self.SQUARE_HIT:
+            return_value = True
+        return return_value
+
+    def workout_next_shot(self):
+        if self.was_previous_shot_a_hit() == True:
+            pass
+
+
+        
+
+    def get_random_position_level2(self):
+        pass
+
+        #if previous_shot() == hit:
+        #   workout_next_shot()
+        #else:
+        #    return get_random_position()
+        
+
 
     def _allocate_ship(self,board, ship_size, ship_name):
         

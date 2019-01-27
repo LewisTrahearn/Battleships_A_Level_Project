@@ -112,6 +112,16 @@ class DataAccessLayer():
 
     def get_logged_user_player_2(self):
         return self._logged_in_user_player_2
+    
+    def is_player2_cpu(self):
+        return_value = False
+        if self._logged_in_user_player_2 != None:
+            if self._logged_in_user_player_2.username == "CPU":
+                return_value = True
+        return return_value
+    
+    
+    
     def is_player_two_logged_in(self):
         if self._logged_in_user_player_2 != None:
             return True

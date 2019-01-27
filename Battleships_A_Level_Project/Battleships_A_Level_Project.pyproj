@@ -31,6 +31,9 @@
     <Compile Include="Board.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ComputerPlayer.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="DataAcessLayer.py" />
     <Compile Include="GameBoard.py">
       <SubType>Code</SubType>

@@ -9,6 +9,7 @@ import optionsMenu as Menu
 import Board as Board
 import Allocation as Allocation
 import player as Player
+import ComputerPlayer as CPU
 
 
 
@@ -68,7 +69,11 @@ class GameBoard(object):
         
 
         player1 = Player.Player(board, p2_allocation, self._dal, screen)
-        player2 = Player.Player(board, p1_allocation, self._dal, screen)
+        if self._dal.is_player2_cpu() == False:
+            player2 = Player.Player(board, p1_allocation, self._dal, screen)
+        else: 
+            player2 = CPU.ComputerPlayer(board, p1_allocation, self._dal, screen)
+
 
         current_player = player1
 

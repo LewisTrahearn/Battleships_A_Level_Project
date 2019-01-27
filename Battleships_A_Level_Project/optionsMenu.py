@@ -30,6 +30,7 @@ class optionsMenu(object):
 
     def __init__(self):
         """ default constructor """
+        self._PLAYER2 = 2
         self._login_color = 255, 0, 0
         self._facade = Facade.facade_layer()
         self._btn_simulation_off = self._facade.loadImage("simulation_button_off.png")
@@ -78,7 +79,8 @@ class optionsMenu(object):
      # this is the login button for player 2. This allows the second player to login only when the gamemode is against an opponent
         if event.type == pygame.MOUSEBUTTONDOWN:
             if self._current_selected == Button.OPPONENT:
-                if self._login_button_pos.collidepoint(pos) == True:            
+                if self._login_button_pos.collidepoint(pos) == True:    
+                    #This is used to login player 2
                     login = LoginScreen.Login(0, 0, 1280, 1024, dal, 2)
                     retval = login.display()
                     screen1, background1, clock1 = self._facade.initialise_screen("battleships", "battleship_Options_leftbar.png", self._screen_size)
@@ -104,6 +106,8 @@ class optionsMenu(object):
         if event.type == pygame.MOUSEBUTTONDOWN:
             if self._current_selected == Button.SIMULATION:
                 if self._play_button_pos.collidepoint(pos) == True:
+                    #here we need to auto login CPU as player 2
+                    dal.is_user_valid("CPU", "CPU",self._PLAYER2)
                     game = GameScreen.GameBoard(0,0,1280,1024,dal)
                     retval = game.display() 
                     screen1, background1, clock1 = self._facade.initialise_screen("battleships", "battleship_Options_leftbar.png", self._screen_size)
