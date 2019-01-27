@@ -82,6 +82,13 @@ class Board(object):
         self._draw_slider_controls()
         self._draw_board(allocation)
         self._cross_out_destroyed_ships(allocation)
+        self._draw_game_over(allocation)
+        
+    def _draw_game_over(self, allocation):
+        if allocation.are_all_ships_destroyed() == True:
+            self._facade.DrawStringArchivoNarrow(self._screen,"GAME OVER", 400, 438,self._GREEN, False, 77 )
+            
+
     
     def _draw_board(self, allocation):
         for row in range(self.BOARD_HEIGHT):

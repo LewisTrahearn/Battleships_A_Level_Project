@@ -75,6 +75,7 @@ class Player(object):
         # MORE CONSTANTS
         self.YELLOW = (250,   167,   74)
         self.WHITE = (255, 255, 255)
+        self.GREEN = (0, 255, 0)
 
     @property
     def is_player_1(self):
@@ -99,6 +100,10 @@ class Player(object):
     def take_turn(self, pos, event):
             
         #self._allocation.show_allocation(self._screen)
+        player1_name = self._dal.get_logged_user_player_1().username;
+        player2_name = self._dal.get_logged_user_player_2().username;
+        self._facade.DrawStringArchivoNarrow(self._screen,player1_name, 26, 240,self.WHITE, False, 44 )
+        self._facade.DrawStringArchivoNarrow(self._screen,player2_name, 1100, 240,self.GREEN, False, 44 )
 
         if self.shot_taken == False:
             self._player_input(pos, event)
@@ -113,6 +118,7 @@ class Player(object):
         player2_name = self._dal.get_logged_user_player_2().username;
         player1_msg = "The next player is {}. Click to contine.".format(player1_name)
         player2_msg = "The next player is {}. Click to contine.".format(player2_name)
+
 
         if not self._allocation.is_player_1() == True:
             self._facade.DrawStringArchivoNarrow(self._screen,player2_msg, 400, 980,self.YELLOW, False )
