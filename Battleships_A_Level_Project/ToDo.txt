@@ -2,13 +2,20 @@ SATURDAY
 1. add logic to finish game - EASY AMOUNT OF WORK
 7. names at the top of the game screen
 
-SUNDAY
-2. add logic to update XML file with stats - MEDIUM AMOUNT WORK
 
-SUNDAY - START
+
+SUNDAY 
 4. implement cpu logic - MEDIUM/LARGE
 
+login - automatic login for cpu
+playerClass - create a new class called CPU and inherit fom the player class and override what we need 
+in the new class 
+level 1 - implement a random firing system in to un allocated square
+level 2 - once it hits it will concentrate around that area
+
+
 NEXT COMPLETE
+2. add logic to update XML file with stats - MEDIUM AMOUNT WORK
 8. create ships log screen - LARGE AMOUNT
 
 

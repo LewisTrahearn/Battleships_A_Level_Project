@@ -1,7 +1,18 @@
 <?xml version="1.0" ?>
 <root nextuserid="11">
     <users>
-        <user id="1">
+        <user id="11">
+            <forename>CPU</forename>
+            <surname>CPU</surname>
+            <username>CPU</username>
+            <email>CPU@CPU.com</email>
+            <password>CPU</password>
+            <stats>
+                <stat gametime="20mins" number_of_shots="44" opponent="computer" win="true"/>
+                <stat gametime="40mins" number_of_shots="44" opponent="lewis" win="true"/>
+            </stats>
+        </user>
+        <user id="11">
             <forename>Ian</forename>
             <surname>Trahearn</surname>
             <username>maddog</username>
