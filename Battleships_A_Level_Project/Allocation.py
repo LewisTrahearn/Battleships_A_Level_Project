@@ -23,6 +23,7 @@ Purpose:
 Author:
     Lewis Trahearn
 
+    changed
 """
 import pygame
 from pygame.locals import *
@@ -121,6 +122,13 @@ class Allocation(object):
         if self._destroyer_lives <= 0:
             return_value = True
         return return_value
+
+    def are_all_ships_destroyed(self):
+        return_value = False
+        if self.is_destroyer_destroyed() == True and self.is_submarine_destroyed() == True and self.is_cruiser_destroyed() == True and self.is_carrier_destroyed() == True and self.is_battleship_destroyed() == True:
+            return_value = True
+        return return_value
+
 
     def is_player_1(self):
         return_value = False
