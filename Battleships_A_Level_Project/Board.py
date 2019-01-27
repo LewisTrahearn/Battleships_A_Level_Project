@@ -66,7 +66,7 @@ class Board(object):
         self.x_axis_starting_point = 20 - self._origin_x
         self.y_axis_starting_point = 20 - self._origin_y
 
-        # Create the facade layer so we can draw the labels to screen
+        # Create the facade layer so we can draw the labels to screen changed
         self._facade = Facade.facade_layer()
 
         self._hit_image = self._facade.loadImage('explosion.png')
