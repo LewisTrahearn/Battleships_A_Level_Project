@@ -5,6 +5,7 @@ import login as LoginScreen
 from enum import Enum
 import GameBoard as GameScreen
 import Register as RegisterScreen
+import ShipsLog as ShipsLogScreen
 
 from navigate import Navigate
 
@@ -126,7 +127,18 @@ class optionsMenu(object):
                     if retval == Navigate.SPLASHSCREEN:
                         return retval
                     
+        # this calls the game board for the simulation when the play button is pressed
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            if self._current_selected == Button.SHIPS_LOG:
+                if self._play_button_pos.collidepoint(pos) == True:
+                    #here we need to auto login CPU as player 2
+                    ships_log = ShipsLogScreen.ShipsLog(0,0,1280,1024,dal)
+                    retval = ships_log.display()
 
+                    screen1, background1, clock1 = self._facade.initialise_screen("battleships", "battleship_Options_leftbar.png", self._screen_size)
+                    self.draw(screen, Button.SIMULATION, Button.SIMULATION,dal)
+                    if retval == Navigate.SPLASHSCREEN:
+                        return retval
 
                             
      # this tells the players who is against who only displayed for the opponent and also if another player is logged in.
@@ -138,6 +150,7 @@ class optionsMenu(object):
         if self._current_selected == Button.SIMULATION:
                 message = "Player {} v Computer".format(dal.get_logged_user_player_1().username)
                 self._facade.DrawStringArchivoNarrow(screen, message, 436, 700, self._login_color, False, 60)
+     
      # while the mouse is moving this decides if the mouse hovered on a button and if it did it tells it to highlight it.
         if event.type == pygame.MOUSEMOTION:
             if self._btn_simulation_pos.collidepoint(pos) == True:
@@ -157,6 +170,7 @@ class optionsMenu(object):
 
             if self._btn_quit_pos.collidepoint(pos) == True:
                self._current_button = Button.QUIT
+
      # this is for when a person clicks a button this keeps track of the currnetly selected button 
         if event.type == pygame.MOUSEBUTTONDOWN:
             if self._btn_simulation_pos.collidepoint(pos) == True:
@@ -204,6 +218,7 @@ class optionsMenu(object):
 
         if instructions == Button.SHIPS_LOG:
              screen.blit(self._instruction_box_ships_log, self._instruction_box_pos)
+             screen.blit(self._play_button, self._play_button_pos)
 
         if instructions == Button.PROFILE:
              screen.blit(self._instruction_box_profile, self._instruction_box_pos)
