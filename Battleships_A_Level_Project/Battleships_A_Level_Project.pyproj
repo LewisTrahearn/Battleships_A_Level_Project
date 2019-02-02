@@ -67,6 +67,9 @@
     <Compile Include="ShipsLog.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ShipsLogMenu.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="splashscreen.py">
       <SubType>Code</SubType>
     </Compile>
