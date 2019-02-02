@@ -13,6 +13,7 @@ import Board as Board
 import Allocation as Allocation
 import player as Player
 import ComputerPlayer as CPU
+import ShipsLogMenu as Menu
 
 
 
@@ -60,7 +61,7 @@ class ShipsLog(object):
         """ """
         screen, background, clock = self._facade.initialise_screen("battleships", "shipsLog_background.png", self._screen_size)
 
-
+        menu = Menu.ShipsLogMenu(screen, self._dal)
 
         ################################################
         # This is the main gaming loop for this screen
@@ -78,12 +79,12 @@ class ShipsLog(object):
                 if event.type == QUIT or (event.type == KEYDOWN and event.key == K_ESCAPE):
                     return Navigate.SPLASHSCREEN
                 
-                ## Get the current mouse positional information
+             ## Get the current mouse positional information
                 pos = pygame.mouse.get_pos()
-            
+             
             screen.blit(background, (0, 0))
 
-          
+            menu.process(pos, event) 
 
             
             # the next statement is important otherwise carriage returns will remain and continue to be processed in the processForm           
@@ -91,7 +92,7 @@ class ShipsLog(object):
             pygame.display.update()
          
             
-            pygame.display.flip()
+
 
 
 
