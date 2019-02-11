@@ -62,6 +62,7 @@ class optionsMenu(object):
         self._instruction_box_ships_log = self._facade.loadImage("instructions_box_ships_log.png")
         self._instruction_box_opponent = self._facade.loadImage("instructions_box_opponent.png")
         self._instruction_box_profile = self._facade.loadImage("instructions_box_profile.png")
+        self._instruction_box_help = self._facade.loadImage("instructions_box_help.png")
         self._play_button = self._facade.loadImage("play_button.png")
         self._login_button = self._facade.loadImage("login_button.png")
         self._edit_button = self._facade.loadImage("edit_button.png")
@@ -71,6 +72,7 @@ class optionsMenu(object):
         self._login_button_pos = Rect(436,875,198,63)
         self._instruction_box_pos = Rect(436,32,804,422)
         self._edit_button_pos = Rect(436,875,198,63)
+
 
         self._current_button = Button.SIMULATION
         self._current_selected = Button.SIMULATION
@@ -140,6 +142,11 @@ class optionsMenu(object):
                     if retval == Navigate.SPLASHSCREEN:
                         return retval
 
+                            # this calls the game board for the simulation when the play button is pressed
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            if self._current_selected == Button.HELP:
+                if self._play_button_pos.collidepoint(pos) == True:
+                    self._facade.launch_help()
                             
      # this tells the players who is against who only displayed for the opponent and also if another player is logged in.
         if self._current_selected == Button.OPPONENT:
@@ -224,6 +231,9 @@ class optionsMenu(object):
              screen.blit(self._instruction_box_profile, self._instruction_box_pos)
              screen.blit(self._edit_button, self._edit_button_pos)
 
+        if instructions == Button.HELP:
+             screen.blit(self._instruction_box_help, self._instruction_box_pos)
+             screen.blit(self._play_button, self._play_button_pos)
 
        
         if button_on == Button.OPPONENT:
@@ -243,6 +253,7 @@ class optionsMenu(object):
 
         if button_on == Button.HELP:
             screen.blit(self._btn_help_on, self._btn_help_pos)
+
         else:
             screen.blit(self._btn_help_off, self._btn_help_pos)
 

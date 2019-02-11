@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Facade Layer Documentation &#8212; Battleships v1.0 documentation</title>
+    <title>Facade Layer &#8212; Battleships v1.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -15,7 +15,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Gameboard Documentation" href="gameboard.html" />
+    <link rel="next" title="Gameboard" href="gameboard.html" />
     <link rel="prev" title="Login" href="login.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -34,7 +34,7 @@
           <div class="body" role="main">
             
   <div class="section" id="module-facade_layer">
-<span id="facade-layer-documentation"></span><h1>Facade Layer Documentation<a class="headerlink" href="#module-facade_layer" title="Permalink to this headline">¶</a></h1>
+<span id="facade-layer"></span><h1>Facade Layer<a class="headerlink" href="#module-facade_layer" title="Permalink to this headline">¶</a></h1>
 <dl class="docutils">
 <dt>Module Name:</dt>
 <dd>facade_layer.py</dd>
@@ -123,7 +123,7 @@ DrawGameOver(self,screen, s, x, y, fg, bg  ) - used to draw the game over messag
 
 <dl class="attribute">
 <dt id="facade_layer.facade_layer.__dict__">
-<code class="descname">__dict__</code><em class="property"> = mappingproxy({'__module__': 'facade_layer', '__init__': &lt;function facade_layer.__init__&gt;, 'DrawStringPirateFont': &lt;function facade_layer.DrawStringPirateFont&gt;, 'playLaunchSound': &lt;function facade_layer.playLaunchSound&gt;, 'DrawStringArchivoNarrow': &lt;function facade_layer.DrawStringArchivoNarrow&gt;, 'DrawGameOver': &lt;function facade_layer.DrawGameOver&gt;, 'playExplosionWithSplashSound': &lt;function facade_layer.playExplosionWithSplashSound&gt;, 'playRolloverSound': &lt;function facade_layer.playRolloverSound&gt;, '__doc__': '\n    description:\n    a facade layer is a design pattern within UML (Unified Modelling Language) that allows you to put a simpler\n    interface in place for a group of classes. Think of it like a multi-tool or a generic library of helper methods. \n\n    In our case the interface I am trying to simplify is a layer between my game logic\n    and the pygame library, so where possible I shall put in here common methods\n    that are reusable within the battleships game.\n\n    This may not be possible for all things, however it will help simply the game logic.\n    \n    attributes:\n        name - this is used as a control variable to stop the sounds and music from repeating\n\n    methods:\n        __init__(self) - default constructor no parameters required\n        loadImage(self,file) - public method to load an image\n        DrawString(self,screen, background, s, x, y, fg, bg, font, size, bold) - public method to draw a string of characters to the screen using a system font\n        DrawStringPirateFont(self,screen, s, x, y, fg, bg  ) - public method to draw a string to the screen using a pirate font\n        DrawStringArchivoNarrow(self,screen, s, x, y, fg, bg  ) public method to draw to the screen using Archivo Narrow font\n        playRolloverSound(self,name): - public method to play roll over sound \n        playLaunchSound(self,name) - public method, plys lauch sound of missile\n        playExplosionWithSplashSound(self,name) - public method, plays an explosion with a splash sound for a miss\n        DrawName(self,screen, s, x, y, fg, bg  ) - used to draw a user name on the screen\n        DrawGameOver(self,screen, s, x, y, fg, bg  ) - used to draw the game over message\n\n    ', '__weakref__': &lt;attribute '__weakref__' of 'facade_layer' objects&gt;, 'DrawName': &lt;function facade_layer.DrawName&gt;, 'launch_help': &lt;function facade_layer.launch_help&gt;, '__dict__': &lt;attribute '__dict__' of 'facade_layer' objects&gt;, 'initialise_screen': &lt;function facade_layer.initialise_screen&gt;, 'DrawString': &lt;function facade_layer.DrawString&gt;, 'loadImage': &lt;function facade_layer.loadImage&gt;})</em><a class="headerlink" href="#facade_layer.facade_layer.__dict__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__dict__</code><em class="property"> = mappingproxy({'initialise_screen': &lt;function facade_layer.initialise_screen&gt;, '__doc__': '\n    description:\n    a facade layer is a design pattern within UML (Unified Modelling Language) that allows you to put a simpler\n    interface in place for a group of classes. Think of it like a multi-tool or a generic library of helper methods. \n\n    In our case the interface I am trying to simplify is a layer between my game logic\n    and the pygame library, so where possible I shall put in here common methods\n    that are reusable within the battleships game.\n\n    This may not be possible for all things, however it will help simply the game logic.\n    \n    attributes:\n        name - this is used as a control variable to stop the sounds and music from repeating\n\n    methods:\n        __init__(self) - default constructor no parameters required\n        loadImage(self,file) - public method to load an image\n        DrawString(self,screen, background, s, x, y, fg, bg, font, size, bold) - public method to draw a string of characters to the screen using a system font\n        DrawStringPirateFont(self,screen, s, x, y, fg, bg  ) - public method to draw a string to the screen using a pirate font\n        DrawStringArchivoNarrow(self,screen, s, x, y, fg, bg  ) public method to draw to the screen using Archivo Narrow font\n        playRolloverSound(self,name): - public method to play roll over sound \n        playLaunchSound(self,name) - public method, plys lauch sound of missile\n        playExplosionWithSplashSound(self,name) - public method, plays an explosion with a splash sound for a miss\n        DrawName(self,screen, s, x, y, fg, bg  ) - used to draw a user name on the screen\n        DrawGameOver(self,screen, s, x, y, fg, bg  ) - used to draw the game over message\n\n    ', '__init__': &lt;function facade_layer.__init__&gt;, 'playLaunchSound': &lt;function facade_layer.playLaunchSound&gt;, 'playRolloverSound': &lt;function facade_layer.playRolloverSound&gt;, '__weakref__': &lt;attribute '__weakref__' of 'facade_layer' objects&gt;, 'DrawGameOver': &lt;function facade_layer.DrawGameOver&gt;, '__dict__': &lt;attribute '__dict__' of 'facade_layer' objects&gt;, 'loadImage': &lt;function facade_layer.loadImage&gt;, 'DrawName': &lt;function facade_layer.DrawName&gt;, 'DrawStringArchivoNarrow': &lt;function facade_layer.DrawStringArchivoNarrow&gt;, '__module__': 'facade_layer', 'DrawString': &lt;function facade_layer.DrawString&gt;, 'DrawStringPirateFont': &lt;function facade_layer.DrawStringPirateFont&gt;, 'launch_help': &lt;function facade_layer.launch_help&gt;, 'playExplosionWithSplashSound': &lt;function facade_layer.playExplosionWithSplashSound&gt;})</em><a class="headerlink" href="#facade_layer.facade_layer.__dict__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -309,8 +309,8 @@ overrides the normal algorithm (and the outcome is cached).</p>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="login.html">Login</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Facade Layer Documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gameboard.html">Gameboard Documentation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Facade Layer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gameboard.html">Gameboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="field.html">Field</a></li>
 </ul>
 
@@ -319,7 +319,7 @@ overrides the normal algorithm (and the outcome is cached).</p>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="login.html" title="previous chapter">Login</a></li>
-      <li>Next: <a href="gameboard.html" title="next chapter">Gameboard Documentation</a></li>
+      <li>Next: <a href="gameboard.html" title="next chapter">Gameboard</a></li>
   </ul></li>
 </ul>
 </div>

@@ -14,6 +14,8 @@ import Allocation as Allocation
 import player as Player
 import ComputerPlayer as CPU
 import ShipsLogMenu as Menu
+import StatsContainer as StatsCon
+from  ShipsLogMenu import MenuOptionButton
 
 
 
@@ -55,6 +57,77 @@ class ShipsLog(object):
 
         self._facade = Facade.facade_layer()
 
+        # MORE CONSTANTS
+        self.YELLOW = (250,   167,   74)
+        self.WHITE = (255, 255, 255)
+        self.GREEN = (0, 255, 0)
+
+
+    def display_table_hits(self, results, screen):
+        counter = 0
+        x = 712
+        x1 = 1134
+        y= 343
+
+        self._facade.DrawStringArchivoNarrow(screen,"Rank", 408, 264,self.WHITE, False, 34 )
+        self._facade.DrawStringArchivoNarrow(screen,"Player", 767, 264,self.WHITE, False, 34 )
+        self._facade.DrawStringArchivoNarrow(screen,"Hits", 1134, 264,self.WHITE, False, 34 )
+
+        for stat in results:
+            if counter >= 10:
+                break;
+            self._facade.DrawStringArchivoNarrow(screen,stat.username, x, y,self.WHITE, False, 34 )
+            self._facade.DrawStringArchivoNarrow(screen,str(stat.number_of_shots), x1, y,self.WHITE, False, 34 )
+            y = y + 50
+            counter = counter + 1
+
+    def display_table_least_time(self, results, screen):
+        counter = 0
+        x = 712
+        x1 = 1077
+        y= 343
+
+        self._facade.DrawStringArchivoNarrow(screen,"Rank", 408, 264,self.WHITE, False, 34 )
+        self._facade.DrawStringArchivoNarrow(screen,"Player", 767, 264,self.WHITE, False, 34 )
+        self._facade.DrawStringArchivoNarrow(screen,"Time", 1134, 264,self.WHITE, False, 34 )
+
+        for stat in results:
+            if counter >= 10:
+                break;
+            self._facade.DrawStringArchivoNarrow(screen,stat.username, x, y,self.WHITE, False, 34 )
+            self._facade.DrawStringArchivoNarrow(screen,str(stat.gametime), x1, y,self.WHITE, False, 34 )
+            y = y + 50
+            counter = counter + 1
+
+    def display_table_most_wins(self, results, screen):
+        counter = 0
+        x = 712
+        x1 = 1077
+        y= 343
+
+        self._facade.DrawStringArchivoNarrow(screen,"Rank", 408, 264,self.WHITE, False, 34 )
+        self._facade.DrawStringArchivoNarrow(screen,"Player", 767, 264,self.WHITE, False, 34 )
+        self._facade.DrawStringArchivoNarrow(screen,"Most Wins", 1134, 264,self.WHITE, False, 34 )
+
+        for stat in results:
+            if counter >= 10:
+                break;
+            self._facade.DrawStringArchivoNarrow(screen,stat.username, x, y,self.WHITE, False, 34 )
+            self._facade.DrawStringArchivoNarrow(screen,str(stat.win_count), x1, y,self.WHITE, False, 34 )
+            y = y + 50
+            counter = counter + 1
+
+    def display_profile(self,gamecount,  win_count,  lowest_number_of_hits, bestTime, screen):
+        self._facade.DrawStringArchivoNarrow(screen,str(gamecount), 705, 360,self.WHITE, False, 34 )
+        self._facade.DrawStringArchivoNarrow(screen,str(win_count), 705, 425,self.WHITE, False, 34 )
+        self._facade.DrawStringArchivoNarrow(screen,bestTime, 705, 490,self.WHITE, False, 34 )
+        self._facade.DrawStringArchivoNarrow(screen,str(lowest_number_of_hits), 705, 569,self.WHITE, False, 34 )
+
+        position_based_on_hits = self._dal.get_position_in_crew_based_upon_shots(lowest_number_of_hits)
+        self._facade.DrawStringArchivoNarrow(screen,position_based_on_hits, 955, 569,self.WHITE, False, 34 )
+
+        position_based_upon_time = self._dal.get_position_in_crew_based_upon_gametime(bestTime)
+        self._facade.DrawStringArchivoNarrow(screen,position_based_upon_time, 955, 490,self.WHITE, False, 34 )
 
 
     def display(self):
@@ -62,6 +135,14 @@ class ShipsLog(object):
         screen, background, clock = self._facade.initialise_screen("battleships", "shipsLog_background.png", self._screen_size)
 
         menu = Menu.ShipsLogMenu(screen, self._dal)
+        self._dal.load_game_stats()
+        self._dal.load_number_of_games_stats()
+
+        results = self._dal.sort_by_number_of_shots()
+        gametime_results = self._dal.sort_by_gametime()
+        number_of_wins_results = self._dal.sort_by_number_of_wins()
+
+        gamecount,  win_count,  lowest_number_of_hits, bestTime = self._dal.get_logged_in_player_1_stats()
 
         ################################################
         # This is the main gaming loop for this screen
@@ -85,8 +166,21 @@ class ShipsLog(object):
             screen.blit(background, (0, 0))
 
             menu.process(pos, event) 
+            if menu.getCurrentSelected() == MenuOptionButton.LEAST_HITS:
+                self.display_table_hits(results, screen)
 
+            if menu.getCurrentSelected() == MenuOptionButton.LEAST_TIME:
+                self.display_table_least_time(gametime_results, screen)
+
+            if menu.getCurrentSelected() == MenuOptionButton.MOST_WINS:
+                self.display_table_most_wins(number_of_wins_results, screen)
             
+            if menu.getCurrentSelected() == MenuOptionButton.YOUR_PROFILE:
+                self.display_profile(gamecount,  win_count,  lowest_number_of_hits, bestTime, screen)
+
+            if menu.getCurrentSelected() == MenuOptionButton.EXIT:
+                    return Navigate.SPLASHSCREEN            
+
             # the next statement is important otherwise carriage returns will remain and continue to be processed in the processForm           
 
             pygame.display.update()

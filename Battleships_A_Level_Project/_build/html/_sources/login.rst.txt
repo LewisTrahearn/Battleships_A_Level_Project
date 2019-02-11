@@ -2,6 +2,8 @@
 Login
 *****
 
+.. automodule:: login
+
 Login Screen
 -------------------
 
@@ -23,10 +25,3 @@ Class Documentation
 	:undoc-members:
 	:inherited-members:
 	:show-inheritance:
-
-Attribute List
---------------
-.. currentmodule:: login
-
-.. autoattribute:: Login
-	:members:

@@ -1,5 +1,5 @@
-Gameboard Documentation
-=======================
+Gameboard
+=========
 
 .. automodule:: GameBoard
 	:members:

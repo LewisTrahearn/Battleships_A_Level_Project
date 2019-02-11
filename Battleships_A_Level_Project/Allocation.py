@@ -97,6 +97,8 @@ class Allocation(object):
         self._last_shot_row = -1
         self._last_shot_col = -1
 
+        self._number_of_shots_taken = 0
+
     def is_battleship_destroyed(self):
         return_value = False
         if self._battleship_lives <= 0:
@@ -146,6 +148,10 @@ class Allocation(object):
         # player 2 will be the inverse of player 1, hence the use of not operator
         return_value = self.is_player_1()
         return not return_value
+
+    @property
+    def get_number_of_shots_taken(self):
+        return self._number_of_shots_taken 
 
     @property
     def board_battleship_size(self):
@@ -213,10 +219,12 @@ class Allocation(object):
         self._last_shot_row = row
         self._last_shot_col = col
         self._facade.playLaunchSound("launch")
+        self._number_of_shots_taken = self._number_of_shots_taken + 1
 
     def set_square_value_miss(self,row,col):
         self._board[row][col] = "M"
         self._facade.playExplosionWithSplashSound("withSplash")
+        self._number_of_shots_taken = self._number_of_shots_taken + 1
 
 
     def _allocate_board(self,board): 
