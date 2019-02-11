@@ -1,15 +1,18 @@
 <?xml version="1.0" ?>
-<root nextuserid="11">
+<root nextuserid="16">
     <users>
-        <user id="11">
+        <user id="12">
             <forename>CPU</forename>
             <surname>CPU</surname>
             <username>CPU</username>
             <email>CPU@CPU.com</email>
             <password>CPU</password>
             <stats>
-                <stat gametime="20mins" number_of_shots="44" opponent="computer" win="true"/>
-                <stat gametime="40mins" number_of_shots="44" opponent="lewis" win="true"/>
+                <stat gametime="00:10:33" number_of_shots="44" opponent="computer" win="true"/>
+                <stat gametime="00:20:33" number_of_shots="54" opponent="lewis" win="false"/>
+                <stat gametime="00:00:15" number_of_shots="19" opponent="x" win="false"/>
+                <stat gametime="00:00:15" number_of_shots="19" opponent="x" win="false"/>
+                <stat gametime="00:00:23" number_of_shots="20" opponent="DirtyHarry" win="true"/>
             </stats>
         </user>
         <user id="11">
@@ -19,8 +22,513 @@
             <email>itrahearn@wiley.com</email>
             <password>Monday</password>
             <stats>
-                <stat gametime="20mins" number_of_shots="44" opponent="computer" win="true"/>
-                <stat gametime="40mins" number_of_shots="44" opponent="lewis" win="true"/>
+                <stat gametime="00:30:43" number_of_shots="22" opponent="computer" win="true"/>
+                <stat gametime="00:35:33" number_of_shots="23" opponent="lewis" win="true"/>
+                <stat gametime="00:30:43" number_of_shots="18" opponent="computer" win="true"/>
+                <stat gametime="00:15:33" number_of_shots="15" opponent="lewis" win="true"/>
+                <stat gametime="00:30:43" number_of_shots="21" opponent="computer" win="false"/>
+                <stat gametime="00:35:33" number_of_shots="24" opponent="lewis" win="true"/>
+                <stat gametime="00:30:43" number_of_shots="64" opponent="computer" win="false"/>
+                <stat gametime="00:15:03" number_of_shots="14" opponent="lewis" win="true"/>
+                <stat gametime="00:10:43" number_of_shots="48" opponent="computer" win="true"/>
+                <stat gametime="00:35:33" number_of_shots="24" opponent="lewis" win="true"/>
+                <stat gametime="00:30:43" number_of_shots="34" opponent="computer" win="false"/>
+                <stat gametime="00:35:33" number_of_shots="41" opponent="lewis" win="true"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
+                <stat gametime="00:03:29" number_of_shots="21" opponent="nelson" win="false"/>
             </stats>
         </user>
         <user id="2">
@@ -30,8 +538,503 @@
             <email>12TrahearnL@heart-england.co.uk</email>
             <password>Friday12</password>
             <stats>
-                <stat gametime="20mins" number_of_shots="44" opponent="computer" win="true"/>
-                <stat gametime="40mins" number_of_shots="44" opponent="lewis" win="true"/>
+                <stat gametime="00:09:13" number_of_shots="99" opponent="computer" win="false"/>
+                <stat gametime="00:12:15" number_of_shots="77" opponent="lewis" win="false"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
+                <stat gametime="01:28:00" number_of_shots="20" opponent="maddog" win="true"/>
             </stats>
         </user>
         <user id="3">
@@ -40,7 +1043,10 @@
             <username>stu</username>
             <email>12trahearns@heart-england.co.uk</email>
             <password>douglas123</password>
-            <stats/>
+            <stats>
+                <stat gametime="00:08:33" number_of_shots="118" opponent="computer" win="false"/>
+                <stat gametime="00:21:53" number_of_shots="21" opponent="lewis" win="false"/>
+            </stats>
         </user>
         <user id="4">
             <forename>stuart</forename>
@@ -56,7 +1062,10 @@
             <username>ripper10</username>
             <email>Jack@gmail.com</email>
             <password>ripper</password>
-            <stats/>
+            <stats>
+                <stat gametime="00:22:18" number_of_shots="55" opponent="computer" win="false"/>
+                <stat gametime="00:42:19" number_of_shots="88" opponent="lewis" win="false"/>
+            </stats>
         </user>
         <user id="6">
             <forename>june</forename>
@@ -64,7 +1073,10 @@
             <username>terri</username>
             <email>june@X.com</email>
             <password>password</password>
-            <stats/>
+            <stats>
+                <stat gametime="00:08:55" number_of_shots="28" opponent="computer" win="true"/>
+                <stat gametime="00:40:44" number_of_shots="12" opponent="lewis" win="false"/>
+            </stats>
         </user>
         <user id="7">
             <forename>mickey</forename>
@@ -72,7 +1084,10 @@
             <username>disney12</username>
             <email>walt@gmail.com</email>
             <password>walter</password>
-            <stats/>
+            <stats>
+                <stat gametime="00:10:13" number_of_shots="133" opponent="computer" win="false"/>
+                <stat gametime="00:10:22" number_of_shots="121" opponent="lewis" win="false"/>
+            </stats>
         </user>
         <user id="8">
             <forename>update</forename>
@@ -80,7 +1095,10 @@
             <username>fields</username>
             <email>hello@x.com</email>
             <password>king</password>
-            <stats/>
+            <stats>
+                <stat gametime="00:22:33" number_of_shots="111" opponent="computer" win="true"/>
+                <stat gametime="00:11:33" number_of_shots="414" opponent="lewis" win="true"/>
+            </stats>
         </user>
         <user id="9">
             <forename>x</forename>
@@ -88,14 +1106,48 @@
             <username>x</username>
             <email>x@x.com</email>
             <password>x</password>
-            <stats/>
+            <stats>
+                <stat gametime="00:25:33" number_of_shots="144" opponent="computer" win="false"/>
+                <stat gametime="00:40:33" number_of_shots="244" opponent="lewis" win="true"/>
+                <stat gametime="00:01:50" number_of_shots="18" opponent="CPU" win="true"/>
+                <stat gametime="00:01:50" number_of_shots="18" opponent="CPU" win="true"/>
+            </stats>
         </user>
         <user id="10">
             <forename>stu</forename>
             <surname>trajearm</surname>
-            <username>virgin</username>
+            <username>stu</username>
             <email>stutra8@gmail.com</email>
             <password>Monday1</password>
+            <stats>
+                <stat gametime="00:20:33" number_of_shots="144" opponent="computer" win="true"/>
+                <stat gametime="00:40:33" number_of_shots="449" opponent="lewis" win="true"/>
+            </stats>
+        </user>
+        <user id="13">
+            <forename>Clint</forename>
+            <surname>Eastwood</surname>
+            <username>DirtyHarry</username>
+            <email>c.wood@fresno.com</email>
+            <password>harry</password>
+            <stats>
+                <stat gametime="00:03:32" number_of_shots="19" opponent="CPU" win="true"/>
+            </stats>
+        </user>
+        <user id="14">
+            <forename>donald</forename>
+            <surname>duck</surname>
+            <username>duckman</username>
+            <email>donald@duck.com</email>
+            <password>disney1</password>
+            <stats/>
+        </user>
+        <user id="15">
+            <forename>mickee</forename>
+            <surname>mouse</surname>
+            <username>mickey</username>
+            <email>mickey@mouse.com</email>
+            <password>disney1</password>
             <stats/>
         </user>
     </users>

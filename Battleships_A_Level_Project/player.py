@@ -70,6 +70,7 @@ class Player(object):
         self.SLIDER_Y_PLUS      = Rect(872,932,27,29)
         self.NEXT_BUTTON_COORDS = Rect(800,975,100,80)
         self.BIG_RED_BUTTON     = Rect(917,863,95,91)
+        self.EASTER_EGG         = Rect(70,86,100,58)
         # END CONSTANTS
 
         # MORE CONSTANTS
@@ -159,6 +160,11 @@ class Player(object):
             if self.SLIDER_Y_PLUS.collidepoint(pos) == True:
                 self._ready = True
 
+        # see above comment for explanation
+        if event.type == pygame.MOUSEBUTTONUP:
+            if self.EASTER_EGG.collidepoint(pos) == True:
+                self._ready = True
+
         # When the mouse button is pressed on slider control
         # and we are ready to process the message
         # the increment or decrement the variable that keeps track of
@@ -204,6 +210,13 @@ class Player(object):
                 if self._ready == True:
                    self.Fire()
         
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            if self.EASTER_EGG.collidepoint(pos) == True:
+                if self._ready == True:
+                   self._board.set_easter_egg()
+                   self._ready = False
+
+
         #####################################################
         # These are drawing the yellow squares on the sliders                
         x = 460 + (self._control_x_col * 30 )
@@ -245,3 +258,7 @@ class Player(object):
             
         else:
             self._allocation.set_square_value_miss(self._control_y_row, self._control_x_col)
+
+
+
+

@@ -35,6 +35,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DataAcessLayer.py" />
+    <Compile Include="Field.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="GameBoard.py">
       <SubType>Code</SubType>
     </Compile>
@@ -51,6 +54,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="menuPointer.py" />
+    <Compile Include="NumberOfGamesContainer.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Options.py">
       <SubType>Code</SubType>
     </Compile>
@@ -73,7 +79,13 @@
     <Compile Include="splashscreen.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="StatsContainer.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="testXML.py" />
+    <Compile Include="TrackTime.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\" />
@@ -111,7 +123,10 @@
     <Content Include="help\help.mp4" />
     <Content Include="help\help_login.PNG" />
     <Content Include="help\help_splashscreen.PNG" />
+    <Content Include="help\game.html" />
+    <Content Include="help\Ships_Log.html" />
     <Content Include="help\login.html" />
+    <Content Include="help\options.html" />
     <Content Include="help\register.html" />
     <Content Include="images\BATTLESHIPS.png" />
     <Content Include="images\battleship_Options_leftbar.png" />
@@ -159,9 +174,11 @@
     <Content Include="images\splashscreen.png" />
     <Content Include="images\splashscreen_8bit.png" />
     <Content Include="images\login.png" />
+    <Content Include="images\table.png" />
     <Content Include="images\Your Profile_mousedown.png" />
     <Content Include="images\Your Profile_mouseover.png" />
     <Content Include="images\Your Profile_normal.png" />
+    <Content Include="images\your_profile.png" />
     <Content Include="images\your_profile_white_mouseover.png" />
     <Content Include="images\your_profile_white_normal.png" />
     <Content Include="login.rst" />

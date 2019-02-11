@@ -58,14 +58,24 @@ class ShipsLogMenu(object):
         self._btn_exit_normal = self._facade.loadImage("exit_normal.png")
         self._btn_exit_selected = self._facade.loadImage("exit_mousedown.png")
 
+        #### TABLE and YOUR PROFILE
+        self._table = self._facade.loadImage("table.png")
+        self._your_profile_screen = self._facade.loadImage("your_profile.png")
+
         self._your_profile = Rect(0,198,322,124)
         self._least_hits = Rect(0,344,322,124)
         self._least_time = Rect(0,480,322,124)
         self._most_wins = Rect(0,618,322,124)
         self._exit = Rect(0,738,322,124)
 
+        self._your_profile_rect = Rect(378,241,863,449)
+        self._table_rect = Rect(347,334,904,503)
+
         self._current_button = MenuOptionButton.LEAST_TIME
         self._current_selected = MenuOptionButton.YOUR_PROFILE
+
+    def getCurrentSelected(self):
+        return self._current_selected
 
     def process(self, pos, event):
 
@@ -132,15 +142,19 @@ class ShipsLogMenu(object):
 
         if self._current_selected == MenuOptionButton.YOUR_PROFILE:
             self._screen.blit(self._btn_profile_selected, self._your_profile)
+            self._screen.blit(self._your_profile_screen, self._your_profile_rect)
 
         if self._current_selected == MenuOptionButton.LEAST_HITS:
             self._screen.blit(self._btn_least_hits_selected, self._least_hits)
+            self._screen.blit(self._table, self._table_rect)
 
         if self._current_selected == MenuOptionButton.LEAST_TIME:
             self._screen.blit(self._btn_least_time_selected, self._least_time)
+            self._screen.blit(self._table, self._table_rect)
 
         if self._current_selected == MenuOptionButton.MOST_WINS:
             self._screen.blit(self._btn_most_wins_selected, self._most_wins)
+            self._screen.blit(self._table, self._table_rect)
 
         if self._current_selected == MenuOptionButton.EXIT:
             self._screen.blit(self._btn_exit_selected, self._exit)

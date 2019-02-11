@@ -5,17 +5,12 @@ Field
 Field Screen
 -------------------
 
-.. image:: ./images/LoginScreen.png
-    :width: 640px
-    :align: center
-    :height: 480px
-    :alt: alternate text
+.. automodule:: Field
 
 Class Documentation
 -------------------
-.. automodule:: login
 
-.. autoclass:: login.Field
+.. autoclass:: Field.Field
 	:members:
 	:special-members: __init__
 	:private-members:

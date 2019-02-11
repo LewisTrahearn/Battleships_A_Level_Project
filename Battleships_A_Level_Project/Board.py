@@ -36,7 +36,7 @@ import DataAcessLayer as DataAccessLayer
 
 class Board(object):
     """description of class"""
-    def __init__(self, screen):
+    def __init__(self, screen, dal):
         #CONSTANTS
         self._BLACK = (  0,   0,   0)
         self._WHITE = (255, 255, 255)
@@ -68,12 +68,14 @@ class Board(object):
 
         # Create the facade layer so we can draw the labels to screen changed
         self._facade = Facade.facade_layer()
+        self._dal = dal
 
         self._hit_image = self._facade.loadImage('explosion.png')
         self._miss_image = self._facade.loadImage('explosion_miss.png')
 
         self.crossing_out = self._facade.loadImage('crossout.png')
         self.next_button = self._facade.loadImage('next.png')
+        self._easter_egg = False
 
 
     def draw(self,allocation):
@@ -82,20 +84,21 @@ class Board(object):
         self._draw_slider_controls()
         self._draw_board(allocation)
         self._cross_out_destroyed_ships(allocation)
-        self._draw_game_over(allocation)
-        
-    def _draw_game_over(self, allocation):
-        if allocation.are_all_ships_destroyed() == True:
-            self._facade.DrawStringArchivoNarrow(self._screen,"GAME OVER", 400, 438,self._GREEN, False, 77 )
-            
-
+           
+    def set_easter_egg(self):
+        self._easter_egg = not self._easter_egg
     
     def _draw_board(self, allocation):
         for row in range(self.BOARD_HEIGHT):
             for col in range(self.BOARD_WIDTH):
                 s = allocation.get_square_value(row,col)
-                if s != '_':
-                    self._display_at_square(s, row, col)
+
+                if self._easter_egg == False:
+                    if s == 'K' or s =='M':
+                        self._display_at_square(s, row, col)
+                else:
+                    if s != '_':
+                        self._display_at_square(s, row, col)
 
     def draw_next_button(self):
         self._screen.blit(self.next_button, (800,975))

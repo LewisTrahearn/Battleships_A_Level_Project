@@ -1,0 +1,179 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Field &#8212; Battleships v1.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for Field</h1><div class="highlight"><pre>
+<span></span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Module Name:</span>
+
+<span class="sd">    login.py</span>
+
+<span class="sd">Public Functions/Methods:</span>
+
+<span class="sd">    display</span>
+
+<span class="sd">Class:</span>
+<span class="sd">    Field - This is a container class used to hold each form control</span>
+<span class="sd">    Login - This is the main login class used to load the screen and handle the login process</span>
+
+<span class="sd">Imports:</span>
+
+<span class="sd">    **import pygame**   - pygame library.</span>
+
+<span class="sd">    **pygame.locals**   - this is needed for the Rect definition.</span>
+
+<span class="sd">    **enum_navigate**   - common enumeration values shared across all classes.</span>
+
+<span class="sd">    **facade_layer**    - an abstraction from the pygame module, for certain common functions.</span>
+
+<span class="sd">    **Navigate**        - This class is an enumeration class that holds all the options required to move around the system.</span>
+<span class="sd">    </span>
+<span class="sd">    **pygame_textinput** - a 3rd party text input class that allows text input</span>
+
+<span class="sd">Purpose:</span>
+<span class="sd">    This module contains two classes the Field class and the Login class.</span>
+<span class="sd">    The login class is used to load the screen, build a form, get the</span>
+<span class="sd">    user input and then call the data access layer in order to determine</span>
+<span class="sd">    if its correct or not.</span>
+
+<span class="sd">    The Field class a a simple container class that allows me to collect the information</span>
+<span class="sd">    for each input field, such as the x,y coords and instance of the pygame_textinput</span>
+<span class="sd">    and the name of the field and then put these into an array to allow me to cycle around</span>
+<span class="sd">    the form.</span>
+<span class="sd">    </span>
+<span class="sd">Author:</span>
+<span class="sd">    Lewis Trahearn</span>
+<span class="sd">______________________________________________________________________________________________________________________</span>
+
+
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Field"><a class="viewcode-back" href="../field.html#Field.Field">[docs]</a><span class="k">class</span> <span class="nc">Field</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This is a container class for each field within the system</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Field.__init__"><a class="viewcode-back" href="../field.html#Field.Field.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fieldname</span><span class="p">,</span> <span class="n">textinput</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This is the constructor for the class:</span>
+<span class="sd">            - parameters </span>
+<span class="sd">                :param fieldname:    - name you wish to call the field</span>
+<span class="sd">                :param textinput:    - field object</span>
+<span class="sd">                :param x:            - the x coordinate of the field</span>
+<span class="sd">                :param y:            - the y coordinate of the field</span>
+<span class="sd">            - type of parameters</span>
+<span class="sd">                :type fieldname: string literal</span>
+<span class="sd">                :type textinput: object pygame_textinput </span>
+<span class="sd">                :type x: int </span>
+<span class="sd">                :type y: int </span>
+<span class="sd">            - return</span>
+<span class="sd">                :return: none since its a constructor</span>
+<span class="sd">            - return type</span>
+<span class="sd">                :rtype: not applicable</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fieldname</span> <span class="o">=</span> <span class="n">fieldname</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">textinput</span> <span class="o">=</span> <span class="n">textinput</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x1</span> <span class="o">=</span> <span class="n">x1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y1</span> <span class="o">=</span> <span class="n">y1</span></div></div>
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Battleships</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../login.html">Login</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../facade.html">Facade Layer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gameboard.html">Gameboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../field.html">Field</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Lewis Trahearn.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

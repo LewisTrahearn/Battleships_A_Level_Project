@@ -15,7 +15,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Facade Layer Documentation" href="facade.html" />
+    <link rel="next" title="Facade Layer" href="facade.html" />
     <link rel="prev" title="Welcome to Battleships’s documentation!" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -33,8 +33,34 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="login">
-<h1>Login<a class="headerlink" href="#login" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-login">
+<span id="login"></span><h1>Login<a class="headerlink" href="#module-login" title="Permalink to this headline">¶</a></h1>
+<dl class="docutils">
+<dt><strong>Module Name:</strong></dt>
+<dd><em>login.py</em></dd>
+<dt><strong>Public Functions/Methods:</strong></dt>
+<dd><em>display</em> - This loads and processes the entire screen</dd>
+<dt><strong>Class:</strong></dt>
+<dd>Login - This is the main login class used to load the screen and handle the login process</dd>
+</dl>
+<p><strong>Imports:</strong></p>
+<blockquote>
+<div><p><em>import pygame</em>   - pygame library.</p>
+<p><em>pygame.locals</em>   - this is needed for the Rect definition.</p>
+<p><em>enum_navigate</em>   - common enumeration values shared across all classes.</p>
+<p><em>facade_layer</em>    - an abstraction from the pygame module, for certain common functions.</p>
+<p><em>Navigate</em>        - This class is an enumeration class that holds all the options required to move around the system.</p>
+<p><em>pygame_textinput</em> - a 3rd party text input class that allows text input</p>
+<p><em>Field</em>            - a simple container class to hold form information</p>
+</div></blockquote>
+<dl class="docutils">
+<dt><strong>Purpose:</strong></dt>
+<dd>This module containsthe Login class. The login class is used to load 
+the screen, build a form, get the user input and then call the data access layer 
+in order to determine if the user is valid.</dd>
+<dt><strong>Author:</strong></dt>
+<dd><em>Lewis Trahearn</em></dd>
+</dl>
 <div class="section" id="login-screen">
 <h2>Login Screen<a class="headerlink" href="#login-screen" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="_images/LoginScreen.png"><img alt="alternate text" class="align-center" src="_images/LoginScreen.png" style="width: 640px; height: 480px;" /></a>
@@ -46,58 +72,340 @@
 <em class="property">class </em><code class="descclassname">login.</code><code class="descname">Login</code><span class="sig-paren">(</span><em>x1</em>, <em>y1</em>, <em>w</em>, <em>h</em>, <em>dal</em>, <em>player=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/login.html#Login"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#login.Login" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="docutils">
-<dt>description:</dt>
-<dd>This class represents the splashscreen that will introduce the user to the game
-and give them the options of either logging in, registering themselves in the game 
-or quitting.</dd>
-<dt>attributes:</dt>
-<dd><p class="first">_screen_size    private variable, defines screen size as passed in to the constructor of the class</p>
-<p>_login_link     private variable that defines a screen area that is deemed to be selected.</p>
-<p>_register_link  private variable that defines a screen area that is deemed to be selected.
-_quit_link      private variable that defines a screen area that is deemed to be selected.</p>
-<p class="last">_enum_navigate  private object that defines enumeration types for navigation
-_facade         private object that defines the facade layer between pygame and our class
-_background     private object from pygame that represents the background</p>
+<dt><strong>description:</strong></dt>
+<dd><p class="first">This class deals totally with the login functionality and has one public entry point
+which is the display method. This class is used to login the initial player and later on 
+to login the second player in the two player mode.</p>
+<dl class="last docutils">
+<dt>This then handles the following functionality:</dt>
+<dd><ol class="first last arabic simple">
+<li>loads the screen</li>
+<li>gets the users username and login details</li>
+<li>calls into the data access layer in order to verify the details.</li>
+</ol>
 </dd>
-<dt>methods:</dt>
-<dd>__init__(self, x1, y1, w, h) Constructor - pass in screen size</dd>
 </dl>
+</dd>
+</dl>
+<p><strong>attributes:</strong></p>
+<blockquote>
+<div><blockquote>
+<div><p><strong>private instance variables/attributes</strong></p>
+<p><em>self._dal</em> - data access object that is passed in</p>
+<p><em>self._form</em> - this is a form array, which is used to hold the two fields</p>
+<p><em>self._form_index</em> - this keeps track of where we are in the form and what the current field is.</p>
+<p><em>self._text_color</em> - colo of the text used while typing in</p>
+<p><em>self._username</em> - the user name entered</p>
+<p><em>self._password</em> - the password entered</p>
+<p><em>self._screen_size</em> - a rect structure that holds the dimensions of the screen, i.e. x,y,w,h</p>
+<p><em>self._player</em> - the player we are dealing with, i.e. player one or player two sinces this screen is also used in two player mode</p>
+<p><em>self._facade</em> - this holds a reference to the facade layer, which is a collection of helper methods.</p>
+<p><em>self._submit_button</em> - this holds the position and dimensions of the submit button in a Rect</p>
+<p><em>self._cancel_button</em> - this holds the position and dimensions of the cancel button</p>
+<p><strong>public attributes</strong></p>
+<p>None</p>
+</div></blockquote>
+<p><strong>PUBLIC AND PRIVATE METHODS</strong></p>
+</div></blockquote>
 <dl class="method">
 <dt id="login.Login.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>x1</em>, <em>y1</em>, <em>w</em>, <em>h</em>, <em>dal</em>, <em>player=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/login.html#Login.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#login.Login.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructor - passes dimension of screen size.</p>
-<p>Parameters:
-x1 - x - coord
-y1 - y - coord
-w - width
-h - height</p>
+<dd><p>This is the constructor for the class:</p>
+<ul>
+<li><p class="first">parameters</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param x1:</th><td class="field-body">x pos of screen definition</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param y1:</th><td class="field-body">y pos of screen deinition</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">param w:</th><td class="field-body">width of screen</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param h:</th><td class="field-body">height of screen</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">param dal:</th><td class="field-body">a reference to the Data Access Object</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param player:</th><td class="field-body">which player the screen is for player 1 or 2</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>type of parameters</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">type x1:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type y1:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type w:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type h:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type dal:</th><td class="field-body">DataAccess Object</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type player:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>return</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">return:</th><td class="field-body">none since its a constructor</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>return type</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">not applicable</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+</ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="login.Login._build_form">
 <code class="descname">_build_form</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/login.html#Login._build_form"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#login.Login._build_form" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>This is a private method that builds up the form array ready for processing.
+There are no parameters and no return values since it use just class based 
+instance variables.</p>
+<blockquote>
+<div><ul>
+<li><p class="first">parameters</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param None:</th><td class="field-body">There are no parameters for this method</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>return</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">return:</th><td class="field-body">none</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>return type</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">not applicable</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</dd></dl>
 
 <dl class="method">
 <dt id="login.Login._is_login_valid">
 <code class="descname">_is_login_valid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/login.html#Login._is_login_valid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#login.Login._is_login_valid" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>This is a <strong>private</strong> method that will extract the information the user has just entered
+and call a method in the <em>DataAccessLayer</em> to see if the username and password exists</p>
+<blockquote>
+<div><ul>
+<li><p class="first">parameters</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param None:</th><td class="field-body">There are no parameters for this method</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>return</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">return:</th><td class="field-body">return_value  a true or false value to signify if the login is valid or not</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>return type</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">boolean (True or False)</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</dd></dl>
 
 <dl class="method">
 <dt id="login.Login._process_form">
 <code class="descname">_process_form</code><span class="sig-paren">(</span><em>screen</em>, <em>events</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/login.html#Login._process_form"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#login.Login._process_form" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>This is a private method that processes the form i.e. it 
+allows the user to cycle round the list of fields we have defined by
+pressing the return key to move between fields.</p>
+<blockquote>
+<div><ul>
+<li><p class="first">parameters</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param screen:</th><td class="field-body">the screen variable to allow you to draw to it</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param events:</th><td class="field-body">a list of events</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>type of parameters</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">type screen:</th><td class="field-body">pygame surface object</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type events:</th><td class="field-body">pygame event queue</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>return</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">return:</th><td class="field-body">none</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>return type</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">not applicable</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</dd></dl>
 
 <dl class="method">
 <dt id="login.Login.display">
 <code class="descname">display</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/login.html#Login.display"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#login.Login.display" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>This <strong>public method</strong> is the only entry point for this class.
+The display method loads and displays the screen and
+holds the gaming loop for this page.</p>
+<p>it calls the build form, processes the form i.e. allows the user to enter data
+and then validates the entered data by calling the data access layer:</p>
+<blockquote>
+<div><ul>
+<li><p class="first">parameters</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param None:</th><td class="field-body">There are no parameters for this method</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>return</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">return:</th><td class="field-body">one of Navigate enumeration values. The returned value will determine which screen we goto next.</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>return type</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">enum Navigate</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</dd></dl>
 
 </dd></dl>
 
-</div>
-<div class="section" id="attribute-list">
-<h2>Attribute List<a class="headerlink" href="#attribute-list" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -123,11 +431,10 @@ h - height</p>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Login</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#login-screen">Login Screen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#class-documentation">Class Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#attribute-list">Attribute List</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="facade.html">Facade Layer Documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gameboard.html">Gameboard Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="facade.html">Facade Layer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gameboard.html">Gameboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="field.html">Field</a></li>
 </ul>
 
@@ -136,7 +443,7 @@ h - height</p>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="index.html" title="previous chapter">Welcome to Battleships’s documentation!</a></li>
-      <li>Next: <a href="facade.html" title="next chapter">Facade Layer Documentation</a></li>
+      <li>Next: <a href="facade.html" title="next chapter">Facade Layer</a></li>
   </ul></li>
 </ul>
 </div>

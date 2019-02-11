@@ -32,7 +32,54 @@
           <div class="body" role="main">
             
   <h1>Source code for GameBoard</h1><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">pygame</span>
+<span></span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Module Name:</span>
+
+<span class="sd">    login.py</span>
+
+<span class="sd">Public Functions/Methods:</span>
+
+<span class="sd">    display</span>
+
+<span class="sd">Class:</span>
+<span class="sd">    Field - This is a container class used to hold each form control</span>
+<span class="sd">    Login - This is the main login class used to load the screen and handle the login process</span>
+
+<span class="sd">Imports:</span>
+
+<span class="sd">    **import pygame**   - pygame library.</span>
+
+<span class="sd">    **pygame.locals**   - this is needed for the Rect definition.</span>
+
+<span class="sd">    **enum_navigate**   - common enumeration values shared across all classes.</span>
+
+<span class="sd">    **facade_layer**    - an abstraction from the pygame module, for certain common functions.</span>
+
+<span class="sd">    **Navigate**        - This class is an enumeration class that holds all the options required to move around the system.</span>
+<span class="sd">    </span>
+<span class="sd">    **pygame_textinput** - a 3rd party text input class that allows text input</span>
+
+<span class="sd">Purpose:</span>
+<span class="sd">    This module contains two classes the Field class and the Login class.</span>
+<span class="sd">    The login class is used to load the screen, build a form, get the</span>
+<span class="sd">    user input and then call the data access layer in order to determine</span>
+<span class="sd">    if its correct or not.</span>
+
+<span class="sd">    The Field class a a simple container class that allows me to collect the information</span>
+<span class="sd">    for each input field, such as the x,y coords and instance of the pygame_textinput</span>
+<span class="sd">    and the name of the field and then put these into an array to allow me to cycle around</span>
+<span class="sd">    the form.</span>
+<span class="sd">    </span>
+<span class="sd">Author:</span>
+<span class="sd">    Lewis Trahearn</span>
+<span class="sd">______________________________________________________________________________________________________________________</span>
+
+
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+
+<span class="kn">import</span> <span class="nn">pygame</span>
 <span class="kn">from</span> <span class="nn">pygame.locals</span> <span class="k">import</span> <span class="o">*</span>
 
 
@@ -43,6 +90,8 @@
 <span class="kn">import</span> <span class="nn">Board</span> <span class="k">as</span> <span class="nn">Board</span>
 <span class="kn">import</span> <span class="nn">Allocation</span> <span class="k">as</span> <span class="nn">Allocation</span>
 <span class="kn">import</span> <span class="nn">player</span> <span class="k">as</span> <span class="nn">Player</span>
+<span class="kn">import</span> <span class="nn">ComputerPlayer</span> <span class="k">as</span> <span class="nn">CPU</span>
+<span class="kn">import</span> <span class="nn">TrackTime</span> <span class="k">as</span> <span class="nn">StopWatch</span>
 
 
 
@@ -70,7 +119,7 @@
 
 <span class="sd">    methods:</span>
 <span class="sd">        __init__(self, x1, y1, w, h) Constructor - pass in screen size</span>
-
+<span class="sd">        changed</span>
 
 
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -87,24 +136,42 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_dal</span> <span class="o">=</span> <span class="n">dal</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_screen_size</span> <span class="o">=</span> <span class="n">Rect</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_facade</span> <span class="o">=</span> <span class="n">Facade</span><span class="o">.</span><span class="n">facade_layer</span><span class="p">()</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_facade</span> <span class="o">=</span> <span class="n">Facade</span><span class="o">.</span><span class="n">facade_layer</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">checked_out</span> <span class="o">=</span> <span class="kc">False</span>
 
+        <span class="c1"># RGB Colors for the colours we are using</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">BLACK</span> <span class="o">=</span> <span class="p">(</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">WHITE</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">BLUE</span> <span class="o">=</span>  <span class="p">(</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">GREEN</span> <span class="o">=</span> <span class="p">(</span>  <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span>   <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">RED</span> <span class="o">=</span>   <span class="p">(</span><span class="mi">255</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">YELLOW</span> <span class="o">=</span> <span class="p">(</span><span class="mi">250</span><span class="p">,</span>   <span class="mi">167</span><span class="p">,</span>   <span class="mi">74</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">PURPLE</span> <span class="o">=</span> <span class="p">(</span><span class="mi">242</span><span class="p">,</span>   <span class="mi">102</span><span class="p">,</span>   <span class="mi">230</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">OTHER</span> <span class="o">=</span> <span class="p">(</span><span class="mi">240</span><span class="p">,</span><span class="mi">204</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="GameBoard.display"><a class="viewcode-back" href="../gameboard.html#GameBoard.GameBoard.display">[docs]</a>    <span class="k">def</span> <span class="nf">display</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; &quot;&quot;&quot;</span>
         <span class="n">screen</span><span class="p">,</span> <span class="n">background</span><span class="p">,</span> <span class="n">clock</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_facade</span><span class="o">.</span><span class="n">initialise_screen</span><span class="p">(</span><span class="s2">&quot;battleships&quot;</span><span class="p">,</span> <span class="s2">&quot;BATTLESHIPS.png&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_screen_size</span><span class="p">)</span>
 
-        <span class="n">board</span> <span class="o">=</span> <span class="n">Board</span><span class="o">.</span><span class="n">Board</span><span class="p">(</span><span class="n">screen</span><span class="p">)</span>
+        <span class="n">board</span> <span class="o">=</span> <span class="n">Board</span><span class="o">.</span><span class="n">Board</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dal</span><span class="p">)</span>
 
         <span class="n">p1_allocation</span> <span class="o">=</span> <span class="n">Allocation</span><span class="o">.</span><span class="n">Allocation</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
         <span class="n">p2_allocation</span> <span class="o">=</span> <span class="n">Allocation</span><span class="o">.</span><span class="n">Allocation</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+        <span class="n">Tracker</span> <span class="o">=</span> <span class="n">StopWatch</span><span class="o">.</span><span class="n">TrackTime</span><span class="p">()</span>
         
 
         <span class="n">player1</span> <span class="o">=</span> <span class="n">Player</span><span class="o">.</span><span class="n">Player</span><span class="p">(</span><span class="n">board</span><span class="p">,</span> <span class="n">p2_allocation</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dal</span><span class="p">,</span> <span class="n">screen</span><span class="p">)</span>
-        <span class="n">player2</span> <span class="o">=</span> <span class="n">Player</span><span class="o">.</span><span class="n">Player</span><span class="p">(</span><span class="n">board</span><span class="p">,</span> <span class="n">p1_allocation</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dal</span><span class="p">,</span> <span class="n">screen</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dal</span><span class="o">.</span><span class="n">is_player2_cpu</span><span class="p">()</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="n">player2</span> <span class="o">=</span> <span class="n">Player</span><span class="o">.</span><span class="n">Player</span><span class="p">(</span><span class="n">board</span><span class="p">,</span> <span class="n">p1_allocation</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dal</span><span class="p">,</span> <span class="n">screen</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span> 
+            <span class="n">player2</span> <span class="o">=</span> <span class="n">CPU</span><span class="o">.</span><span class="n">ComputerPlayer</span><span class="p">(</span><span class="n">board</span><span class="p">,</span> <span class="n">p1_allocation</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dal</span><span class="p">,</span> <span class="n">screen</span><span class="p">)</span>
+
 
         <span class="n">current_player</span> <span class="o">=</span> <span class="n">player1</span>
+
+        <span class="n">Tracker</span><span class="o">.</span><span class="n">start_timer_1</span><span class="p">()</span>   <span class="c1">## Start tracking the time taken by player </span>
 
         <span class="c1">################################################</span>
         <span class="c1"># This is the main gaming loop for this screen</span>
@@ -128,17 +195,36 @@
             <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">background</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 
 
-            <span class="n">current_player</span><span class="o">.</span><span class="n">take_turn</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">event</span><span class="p">)</span>
-            <span class="k">if</span> <span class="n">current_player</span><span class="o">.</span><span class="n">swap_player</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
-                <span class="n">current_player</span><span class="o">.</span><span class="n">swap_player</span> <span class="o">=</span> <span class="kc">False</span>
-                <span class="n">current_player</span><span class="o">.</span><span class="n">reset_shot_taken</span><span class="p">()</span>
-                <span class="k">if</span> <span class="n">current_player</span><span class="o">.</span><span class="n">is_player_1</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
-                    <span class="n">current_player</span> <span class="o">=</span> <span class="n">player2</span>
-                <span class="k">else</span><span class="p">:</span>
-                    <span class="n">current_player</span> <span class="o">=</span> <span class="n">player1</span>
+            <span class="k">if</span> <span class="n">p1_allocation</span><span class="o">.</span><span class="n">are_all_ships_destroyed</span><span class="p">()</span> <span class="o">==</span> <span class="kc">False</span> <span class="ow">and</span> <span class="n">p2_allocation</span><span class="o">.</span><span class="n">are_all_ships_destroyed</span><span class="p">()</span> <span class="o">==</span> <span class="kc">False</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">checked_out</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+                <span class="n">current_player</span><span class="o">.</span><span class="n">take_turn</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">event</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">current_player</span><span class="o">.</span><span class="n">swap_player</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+                    <span class="n">current_player</span><span class="o">.</span><span class="n">swap_player</span> <span class="o">=</span> <span class="kc">False</span>
+                    <span class="n">current_player</span><span class="o">.</span><span class="n">reset_shot_taken</span><span class="p">()</span>
+                    <span class="k">if</span> <span class="n">current_player</span><span class="o">.</span><span class="n">is_player_1</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+                        <span class="n">Tracker</span><span class="o">.</span><span class="n">stop_timer_1</span><span class="p">()</span>
+                        <span class="n">Tracker</span><span class="o">.</span><span class="n">start_timer_2</span><span class="p">()</span>
+                        <span class="n">current_player</span> <span class="o">=</span> <span class="n">player2</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">Tracker</span><span class="o">.</span><span class="n">stop_timer_2</span><span class="p">()</span>
+                        <span class="n">Tracker</span><span class="o">.</span><span class="n">start_timer_1</span><span class="p">()</span>
+                        <span class="n">current_player</span> <span class="o">=</span> <span class="n">player1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">checked_out</span> <span class="o">==</span> <span class="kc">True</span>
+                <span class="n">t1</span> <span class="o">=</span> <span class="n">Tracker</span><span class="o">.</span><span class="n">get_overall_time_for_timer_1</span><span class="p">()</span>
+                <span class="n">t2</span> <span class="o">=</span> <span class="n">Tracker</span><span class="o">.</span><span class="n">get_overall_time_for_timer_2</span><span class="p">()</span>
+                <span class="n">shots1</span> <span class="o">=</span> <span class="n">p1_allocation</span><span class="o">.</span><span class="n">get_number_of_shots_taken</span>
+                <span class="n">shots2</span> <span class="o">=</span> <span class="n">p2_allocation</span><span class="o">.</span><span class="n">get_number_of_shots_taken</span>
 
+                <span class="k">if</span> <span class="n">p1_allocation</span><span class="o">.</span><span class="n">are_all_ships_destroyed</span><span class="p">()</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>  <span class="c1">### then player 2 won</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_facade</span><span class="o">.</span><span class="n">DrawStringArchivoNarrow</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span><span class="s2">&quot;GAME OVER PLAYER 2 WINS&quot;</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">438</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">GREEN</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mi">77</span> <span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_dal</span><span class="o">.</span><span class="n">add_stat_to_player</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">t2</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">shots2</span><span class="p">),</span> <span class="s2">&quot;true&quot;</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_dal</span><span class="o">.</span><span class="n">add_stat_to_player</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">t1</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">shots1</span><span class="p">),</span> <span class="s2">&quot;false&quot;</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span> <span class="c1">## player 1 won</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_facade</span><span class="o">.</span><span class="n">DrawStringArchivoNarrow</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span><span class="s2">&quot;GAME OVER PLAYER 1 WINS&quot;</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">438</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">GREEN</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mi">77</span> <span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_dal</span><span class="o">.</span><span class="n">add_stat_to_player</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">t1</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">shots1</span><span class="p">),</span> <span class="s2">&quot;true&quot;</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_dal</span><span class="o">.</span><span class="n">add_stat_to_player</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">t2</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">shots2</span><span class="p">),</span> <span class="s2">&quot;false&quot;</span><span class="p">)</span>
 
-            
+         
 
             
             <span class="c1"># the next statement is important otherwise carriage returns will remain and continue to be processed in the processForm           </span>
@@ -171,8 +257,8 @@
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../login.html">Login</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../facade.html">Facade Layer Documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../gameboard.html">Gameboard Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../facade.html">Facade Layer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gameboard.html">Gameboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../field.html">Field</a></li>
 </ul>
 

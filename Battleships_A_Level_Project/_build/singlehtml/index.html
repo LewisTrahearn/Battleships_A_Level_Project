@@ -1,0 +1,1092 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Battleships v1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="welcome-to-battleships-s-documentation">
+<h1>Welcome to Battleships’s documentation!<a class="headerlink" href="#welcome-to-battleships-s-documentation" title="Permalink to this headline">¶</a></h1>
+<p>This is my introduction to this project</p>
+<p>Requirements:</p>
+<p>My project depends on xyz project.</p>
+<p>Contents:</p>
+<div class="toctree-wrapper compound">
+<span id="document-login"></span><div class="section" id="module-login">
+<span id="login"></span><h2>Login<a class="headerlink" href="#module-login" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><strong>Module Name:</strong></dt>
+<dd><em>login.py</em></dd>
+<dt><strong>Public Functions/Methods:</strong></dt>
+<dd><em>display</em> - This loads and processes the entire screen</dd>
+<dt><strong>Class:</strong></dt>
+<dd>Login - This is the main login class used to load the screen and handle the login process</dd>
+</dl>
+<p><strong>Imports:</strong></p>
+<blockquote>
+<div><p><em>import pygame</em>   - pygame library.</p>
+<p><em>pygame.locals</em>   - this is needed for the Rect definition.</p>
+<p><em>enum_navigate</em>   - common enumeration values shared across all classes.</p>
+<p><em>facade_layer</em>    - an abstraction from the pygame module, for certain common functions.</p>
+<p><em>Navigate</em>        - This class is an enumeration class that holds all the options required to move around the system.</p>
+<p><em>pygame_textinput</em> - a 3rd party text input class that allows text input</p>
+<p><em>Field</em>            - a simple container class to hold form information</p>
+</div></blockquote>
+<dl class="docutils">
+<dt><strong>Purpose:</strong></dt>
+<dd>This module containsthe Login class. The login class is used to load 
+the screen, build a form, get the user input and then call the data access layer 
+in order to determine if the user is valid.</dd>
+<dt><strong>Author:</strong></dt>
+<dd><em>Lewis Trahearn</em></dd>
+</dl>
+<div class="section" id="login-screen">
+<h3>Login Screen<a class="headerlink" href="#login-screen" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/LoginScreen.png"><img alt="alternate text" class="align-center" src="_images/LoginScreen.png" style="width: 640px; height: 480px;" /></a>
+</div>
+<div class="section" id="class-documentation">
+<h3>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="login.Login">
+<em class="property">class </em><code class="descclassname">login.</code><code class="descname">Login</code><span class="sig-paren">(</span><em>x1</em>, <em>y1</em>, <em>w</em>, <em>h</em>, <em>dal</em>, <em>player=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/login.html#Login"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#login.Login" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="docutils">
+<dt><strong>description:</strong></dt>
+<dd><p class="first">This class deals totally with the login functionality and has one public entry point
+which is the display method. This class is used to login the initial player and later on 
+to login the second player in the two player mode.</p>
+<dl class="last docutils">
+<dt>This then handles the following functionality:</dt>
+<dd><ol class="first last arabic simple">
+<li>loads the screen</li>
+<li>gets the users username and login details</li>
+<li>calls into the data access layer in order to verify the details.</li>
+</ol>
+</dd>
+</dl>
+</dd>
+</dl>
+<p><strong>attributes:</strong></p>
+<blockquote>
+<div><blockquote>
+<div><p><strong>private instance variables/attributes</strong></p>
+<p><em>self._dal</em> - data access object that is passed in</p>
+<p><em>self._form</em> - this is a form array, which is used to hold the two fields</p>
+<p><em>self._form_index</em> - this keeps track of where we are in the form and what the current field is.</p>
+<p><em>self._text_color</em> - colo of the text used while typing in</p>
+<p><em>self._username</em> - the user name entered</p>
+<p><em>self._password</em> - the password entered</p>
+<p><em>self._screen_size</em> - a rect structure that holds the dimensions of the screen, i.e. x,y,w,h</p>
+<p><em>self._player</em> - the player we are dealing with, i.e. player one or player two sinces this screen is also used in two player mode</p>
+<p><em>self._facade</em> - this holds a reference to the facade layer, which is a collection of helper methods.</p>
+<p><em>self._submit_button</em> - this holds the position and dimensions of the submit button in a Rect</p>
+<p><em>self._cancel_button</em> - this holds the position and dimensions of the cancel button</p>
+<p><strong>public attributes</strong></p>
+<p>None</p>
+</div></blockquote>
+<p><strong>PUBLIC AND PRIVATE METHODS</strong></p>
+</div></blockquote>
+<dl class="method">
+<dt id="login.Login.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>x1</em>, <em>y1</em>, <em>w</em>, <em>h</em>, <em>dal</em>, <em>player=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/login.html#Login.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#login.Login.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the constructor for the class:</p>
+<ul>
+<li><p class="first">parameters</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param x1:</th><td class="field-body">x pos of screen definition</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param y1:</th><td class="field-body">y pos of screen deinition</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">param w:</th><td class="field-body">width of screen</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param h:</th><td class="field-body">height of screen</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">param dal:</th><td class="field-body">a reference to the Data Access Object</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param player:</th><td class="field-body">which player the screen is for player 1 or 2</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>type of parameters</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">type x1:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type y1:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type w:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type h:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type dal:</th><td class="field-body">DataAccess Object</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type player:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>return</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">return:</th><td class="field-body">none since its a constructor</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>return type</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">not applicable</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="login.Login._build_form">
+<code class="descname">_build_form</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/login.html#Login._build_form"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#login.Login._build_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a private method that builds up the form array ready for processing.
+There are no parameters and no return values since it use just class based 
+instance variables.</p>
+<blockquote>
+<div><ul>
+<li><p class="first">parameters</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param None:</th><td class="field-body">There are no parameters for this method</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>return</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">return:</th><td class="field-body">none</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>return type</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">not applicable</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="login.Login._is_login_valid">
+<code class="descname">_is_login_valid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/login.html#Login._is_login_valid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#login.Login._is_login_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a <strong>private</strong> method that will extract the information the user has just entered
+and call a method in the <em>DataAccessLayer</em> to see if the username and password exists</p>
+<blockquote>
+<div><ul>
+<li><p class="first">parameters</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param None:</th><td class="field-body">There are no parameters for this method</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>return</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">return:</th><td class="field-body">return_value  a true or false value to signify if the login is valid or not</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>return type</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">boolean (True or False)</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="login.Login._process_form">
+<code class="descname">_process_form</code><span class="sig-paren">(</span><em>screen</em>, <em>events</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/login.html#Login._process_form"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#login.Login._process_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a private method that processes the form i.e. it 
+allows the user to cycle round the list of fields we have defined by
+pressing the return key to move between fields.</p>
+<blockquote>
+<div><ul>
+<li><p class="first">parameters</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param screen:</th><td class="field-body">the screen variable to allow you to draw to it</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param events:</th><td class="field-body">a list of events</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>type of parameters</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">type screen:</th><td class="field-body">pygame surface object</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type events:</th><td class="field-body">pygame event queue</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>return</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">return:</th><td class="field-body">none</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>return type</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">not applicable</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="login.Login.display">
+<code class="descname">display</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/login.html#Login.display"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#login.Login.display" title="Permalink to this definition">¶</a></dt>
+<dd><p>This <strong>public method</strong> is the only entry point for this class.
+The display method loads and displays the screen and
+holds the gaming loop for this page.</p>
+<p>it calls the build form, processes the form i.e. allows the user to enter data
+and then validates the entered data by calling the data access layer:</p>
+<blockquote>
+<div><ul>
+<li><p class="first">parameters</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param None:</th><td class="field-body">There are no parameters for this method</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>return</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">return:</th><td class="field-body">one of Navigate enumeration values. The returned value will determine which screen we goto next.</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>return type</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">enum Navigate</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<span id="document-facade"></span><div class="section" id="module-facade_layer">
+<span id="facade-layer"></span><h2>Facade Layer<a class="headerlink" href="#module-facade_layer" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Module Name:</dt>
+<dd>facade_layer.py</dd>
+</dl>
+<p>Functions/Methods:</p>
+<dl class="docutils">
+<dt>Class:</dt>
+<dd>facade_layer - simpler interface to the pygame library.</dd>
+<dt>Imports:</dt>
+<dd>random - allow the generation of random numbers
+os.path - specifically load the namespace os.path so that I can retrieve information about the directory path
+pygame - this is the main game library (<a class="reference external" href="https://www.pygame.org/news">https://www.pygame.org/news</a>)</dd>
+<dt>Purpose:</dt>
+<dd><p class="first">a facade layer is a design pattern within UML (Unified Modelling Language) that allows you to put a simpler
+interface in place for a group of classes.</p>
+<p>In our case the interface I am trying to simplify is a layer between my game logic
+and the pygame library, so where possible I shall put in here common methods
+that are reusable within the battleships game.</p>
+<p class="last">This may not be possible for all things, however it will help simply the game logic.</p>
+</dd>
+<dt>Author:</dt>
+<dd>Lewis Trahearn</dd>
+</dl>
+<dl class="class">
+<dt id="facade_layer.facade_layer">
+<em class="property">class </em><code class="descclassname">facade_layer.</code><code class="descname">facade_layer</code><a class="headerlink" href="#facade_layer.facade_layer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>description:
+a facade layer is a design pattern within UML (Unified Modelling Language) that allows you to put a simpler
+interface in place for a group of classes. Think of it like a multi-tool or a generic library of helper methods.</p>
+<p>In our case the interface I am trying to simplify is a layer between my game logic
+and the pygame library, so where possible I shall put in here common methods
+that are reusable within the battleships game.</p>
+<p>This may not be possible for all things, however it will help simply the game logic.</p>
+<dl class="docutils">
+<dt>attributes:</dt>
+<dd>name - this is used as a control variable to stop the sounds and music from repeating</dd>
+<dt>methods:</dt>
+<dd>__init__(self) - default constructor no parameters required
+loadImage(self,file) - public method to load an image
+DrawString(self,screen, background, s, x, y, fg, bg, font, size, bold) - public method to draw a string of characters to the screen using a system font
+DrawStringPirateFont(self,screen, s, x, y, fg, bg  ) - public method to draw a string to the screen using a pirate font
+DrawStringArchivoNarrow(self,screen, s, x, y, fg, bg  ) public method to draw to the screen using Archivo Narrow font
+playRolloverSound(self,name): - public method to play roll over sound 
+playLaunchSound(self,name) - public method, plys lauch sound of missile
+playExplosionWithSplashSound(self,name) - public method, plays an explosion with a splash sound for a miss
+DrawName(self,screen, s, x, y, fg, bg  ) - used to draw a user name on the screen
+DrawGameOver(self,screen, s, x, y, fg, bg  ) - used to draw the game over message</dd>
+</dl>
+<dl class="method">
+<dt id="facade_layer.facade_layer.DrawGameOver">
+<code class="descname">DrawGameOver</code><span class="sig-paren">(</span><em>screen</em>, <em>s</em>, <em>x</em>, <em>y</em>, <em>fg</em>, <em>bg</em><span class="sig-paren">)</span><a class="headerlink" href="#facade_layer.facade_layer.DrawGameOver" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.DrawName">
+<code class="descname">DrawName</code><span class="sig-paren">(</span><em>screen</em>, <em>s</em>, <em>x</em>, <em>y</em>, <em>fg</em>, <em>bg</em><span class="sig-paren">)</span><a class="headerlink" href="#facade_layer.facade_layer.DrawName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.DrawString">
+<code class="descname">DrawString</code><span class="sig-paren">(</span><em>screen</em>, <em>background</em>, <em>s</em>, <em>x</em>, <em>y</em>, <em>fg</em>, <em>bg</em>, <em>font</em>, <em>size</em>, <em>bold</em><span class="sig-paren">)</span><a class="headerlink" href="#facade_layer.facade_layer.DrawString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.DrawStringArchivoNarrow">
+<code class="descname">DrawStringArchivoNarrow</code><span class="sig-paren">(</span><em>screen</em>, <em>s</em>, <em>x</em>, <em>y</em>, <em>fg</em>, <em>bg</em>, <em>font_size=21</em><span class="sig-paren">)</span><a class="headerlink" href="#facade_layer.facade_layer.DrawStringArchivoNarrow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.DrawStringPirateFont">
+<code class="descname">DrawStringPirateFont</code><span class="sig-paren">(</span><em>screen</em>, <em>s</em>, <em>x</em>, <em>y</em>, <em>fg</em>, <em>bg</em><span class="sig-paren">)</span><a class="headerlink" href="#facade_layer.facade_layer.DrawStringPirateFont" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__class__">
+<code class="descname">__class__</code><a class="headerlink" href="#facade_layer.facade_layer.__class__" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">builtins.type</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__delattr__">
+<code class="descname">__delattr__</code><a class="headerlink" href="#facade_layer.facade_layer.__delattr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implement delattr(self, name).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__dict__">
+<code class="descname">__dict__</code><em class="property"> = mappingproxy({'__dict__': &lt;attribute '__dict__' of 'facade_layer' objects&gt;, '__init__': &lt;function facade_layer.__init__&gt;, '__module__': 'facade_layer', 'DrawStringPirateFont': &lt;function facade_layer.DrawStringPirateFont&gt;, 'DrawString': &lt;function facade_layer.DrawString&gt;, 'loadImage': &lt;function facade_layer.loadImage&gt;, '__weakref__': &lt;attribute '__weakref__' of 'facade_layer' objects&gt;, '__doc__': '\n    description:\n    a facade layer is a design pattern within UML (Unified Modelling Language) that allows you to put a simpler\n    interface in place for a group of classes. Think of it like a multi-tool or a generic library of helper methods. \n\n    In our case the interface I am trying to simplify is a layer between my game logic\n    and the pygame library, so where possible I shall put in here common methods\n    that are reusable within the battleships game.\n\n    This may not be possible for all things, however it will help simply the game logic.\n    \n    attributes:\n        name - this is used as a control variable to stop the sounds and music from repeating\n\n    methods:\n        __init__(self) - default constructor no parameters required\n        loadImage(self,file) - public method to load an image\n        DrawString(self,screen, background, s, x, y, fg, bg, font, size, bold) - public method to draw a string of characters to the screen using a system font\n        DrawStringPirateFont(self,screen, s, x, y, fg, bg  ) - public method to draw a string to the screen using a pirate font\n        DrawStringArchivoNarrow(self,screen, s, x, y, fg, bg  ) public method to draw to the screen using Archivo Narrow font\n        playRolloverSound(self,name): - public method to play roll over sound \n        playLaunchSound(self,name) - public method, plys lauch sound of missile\n        playExplosionWithSplashSound(self,name) - public method, plays an explosion with a splash sound for a miss\n        DrawName(self,screen, s, x, y, fg, bg  ) - used to draw a user name on the screen\n        DrawGameOver(self,screen, s, x, y, fg, bg  ) - used to draw the game over message\n\n    ', 'initialise_screen': &lt;function facade_layer.initialise_screen&gt;, 'playLaunchSound': &lt;function facade_layer.playLaunchSound&gt;, 'playExplosionWithSplashSound': &lt;function facade_layer.playExplosionWithSplashSound&gt;, 'DrawStringArchivoNarrow': &lt;function facade_layer.DrawStringArchivoNarrow&gt;, 'DrawGameOver': &lt;function facade_layer.DrawGameOver&gt;, 'DrawName': &lt;function facade_layer.DrawName&gt;, 'launch_help': &lt;function facade_layer.launch_help&gt;, 'playRolloverSound': &lt;function facade_layer.playRolloverSound&gt;})</em><a class="headerlink" href="#facade_layer.facade_layer.__dict__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.__dir__">
+<code class="descname">__dir__</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#facade_layer.facade_layer.__dir__" title="Permalink to this definition">¶</a></dt>
+<dd><p>default dir() implementation</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__eq__">
+<code class="descname">__eq__</code><a class="headerlink" href="#facade_layer.facade_layer.__eq__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return self==value.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.__format__">
+<code class="descname">__format__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#facade_layer.facade_layer.__format__" title="Permalink to this definition">¶</a></dt>
+<dd><p>default object formatter</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__ge__">
+<code class="descname">__ge__</code><a class="headerlink" href="#facade_layer.facade_layer.__ge__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return self&gt;=value.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__getattribute__">
+<code class="descname">__getattribute__</code><a class="headerlink" href="#facade_layer.facade_layer.__getattribute__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return getattr(self, name).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__gt__">
+<code class="descname">__gt__</code><a class="headerlink" href="#facade_layer.facade_layer.__gt__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return self&gt;value.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__hash__">
+<code class="descname">__hash__</code><a class="headerlink" href="#facade_layer.facade_layer.__hash__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return hash(self).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#facade_layer.facade_layer.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__le__">
+<code class="descname">__le__</code><a class="headerlink" href="#facade_layer.facade_layer.__le__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return self&lt;=value.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__lt__">
+<code class="descname">__lt__</code><a class="headerlink" href="#facade_layer.facade_layer.__lt__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return self&lt;value.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__module__">
+<code class="descname">__module__</code><em class="property"> = 'facade_layer'</em><a class="headerlink" href="#facade_layer.facade_layer.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__ne__">
+<code class="descname">__ne__</code><a class="headerlink" href="#facade_layer.facade_layer.__ne__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return self!=value.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.__new__">
+<code class="descname">__new__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#facade_layer.facade_layer.__new__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create and return a new object.  See help(type) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.__reduce__">
+<code class="descname">__reduce__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#facade_layer.facade_layer.__reduce__" title="Permalink to this definition">¶</a></dt>
+<dd><p>helper for pickle</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.__reduce_ex__">
+<code class="descname">__reduce_ex__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#facade_layer.facade_layer.__reduce_ex__" title="Permalink to this definition">¶</a></dt>
+<dd><p>helper for pickle</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__repr__">
+<code class="descname">__repr__</code><a class="headerlink" href="#facade_layer.facade_layer.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return repr(self).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__setattr__">
+<code class="descname">__setattr__</code><a class="headerlink" href="#facade_layer.facade_layer.__setattr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implement setattr(self, name, value).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.__sizeof__">
+<code class="descname">__sizeof__</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#facade_layer.facade_layer.__sizeof__" title="Permalink to this definition">¶</a></dt>
+<dd><p>size of object in memory, in bytes</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__str__">
+<code class="descname">__str__</code><a class="headerlink" href="#facade_layer.facade_layer.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.__subclasshook__">
+<code class="descname">__subclasshook__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#facade_layer.facade_layer.__subclasshook__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstract classes can override this to customize issubclass().</p>
+<p>This is invoked early on by abc.ABCMeta.__subclasscheck__().
+It should return True, False or NotImplemented.  If it returns
+NotImplemented, the normal algorithm is used.  Otherwise, it
+overrides the normal algorithm (and the outcome is cached).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facade_layer.facade_layer.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#facade_layer.facade_layer.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.initialise_screen">
+<code class="descname">initialise_screen</code><span class="sig-paren">(</span><em>title</em>, <em>image_name</em>, <em>screen_size_rect</em><span class="sig-paren">)</span><a class="headerlink" href="#facade_layer.facade_layer.initialise_screen" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.launch_help">
+<code class="descname">launch_help</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#facade_layer.facade_layer.launch_help" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.loadImage">
+<code class="descname">loadImage</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#facade_layer.facade_layer.loadImage" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.playExplosionWithSplashSound">
+<code class="descname">playExplosionWithSplashSound</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#facade_layer.facade_layer.playExplosionWithSplashSound" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.playLaunchSound">
+<code class="descname">playLaunchSound</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#facade_layer.facade_layer.playLaunchSound" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="facade_layer.facade_layer.playRolloverSound">
+<code class="descname">playRolloverSound</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#facade_layer.facade_layer.playRolloverSound" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<span id="document-gameboard"></span><div class="section" id="module-GameBoard">
+<span id="gameboard"></span><h2>Gameboard<a class="headerlink" href="#module-GameBoard" title="Permalink to this headline">¶</a></h2>
+<p>Module Name:</p>
+<blockquote>
+<div>login.py</div></blockquote>
+<p>Public Functions/Methods:</p>
+<blockquote>
+<div>display</div></blockquote>
+<dl class="docutils">
+<dt>Class:</dt>
+<dd>Field - This is a container class used to hold each form control
+Login - This is the main login class used to load the screen and handle the login process</dd>
+</dl>
+<p>Imports:</p>
+<blockquote>
+<div><p><strong>import pygame</strong>   - pygame library.</p>
+<p><strong>pygame.locals</strong>   - this is needed for the Rect definition.</p>
+<p><strong>enum_navigate</strong>   - common enumeration values shared across all classes.</p>
+<p><strong>facade_layer</strong>    - an abstraction from the pygame module, for certain common functions.</p>
+<p><strong>Navigate</strong>        - This class is an enumeration class that holds all the options required to move around the system.</p>
+<p><strong>pygame_textinput</strong> - a 3rd party text input class that allows text input</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>Purpose:</dt>
+<dd><p class="first">This module contains two classes the Field class and the Login class.
+The login class is used to load the screen, build a form, get the
+user input and then call the data access layer in order to determine
+if its correct or not.</p>
+<p class="last">The Field class a a simple container class that allows me to collect the information
+for each input field, such as the x,y coords and instance of the pygame_textinput
+and the name of the field and then put these into an array to allow me to cycle around
+the form.</p>
+</dd>
+<dt>Author:</dt>
+<dd>Lewis Trahearn</dd>
+</dl>
+<hr class="docutils" />
+<dl class="class">
+<dt id="GameBoard.GameBoard">
+<em class="property">class </em><code class="descclassname">GameBoard.</code><code class="descname">GameBoard</code><span class="sig-paren">(</span><em>x1</em>, <em>y1</em>, <em>w</em>, <em>h</em>, <em>dal</em><span class="sig-paren">)</span><a class="headerlink" href="#GameBoard.GameBoard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="docutils">
+<dt>description:</dt>
+<dd>This class represents the splashscreen that will introduce the user to the game
+and give them the options of either logging in, registering themselves in the game 
+or quitting.</dd>
+<dt>attributes:</dt>
+<dd><p class="first">_screen_size    private variable, defines screen size as passed in to the constructor of the class
+_login_link     private variable that defines a screen area that is deemed to be selected.
+_register_link  private variable that defines a screen area that is deemed to be selected.
+_quit_link      private variable that defines a screen area that is deemed to be selected.</p>
+<p class="last">_enum_navigate  private object that defines enumeration types for navigation
+_facade         private object that defines the facade layer between pygame and our class
+_background     private object from pygame that represents the background</p>
+</dd>
+<dt>methods:</dt>
+<dd>__init__(self, x1, y1, w, h) Constructor - pass in screen size
+changed</dd>
+</dl>
+<dl class="attribute">
+<dt id="GameBoard.GameBoard.__class__">
+<code class="descname">__class__</code><a class="headerlink" href="#GameBoard.GameBoard.__class__" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">builtins.type</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="GameBoard.GameBoard.__delattr__">
+<code class="descname">__delattr__</code><a class="headerlink" href="#GameBoard.GameBoard.__delattr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implement delattr(self, name).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="GameBoard.GameBoard.__dict__">
+<code class="descname">__dict__</code><em class="property"> = mappingproxy({'__init__': &lt;function GameBoard.__init__&gt;, '__module__': 'GameBoard', 'display': &lt;function GameBoard.display&gt;, '__dict__': &lt;attribute '__dict__' of 'GameBoard' objects&gt;, '__weakref__': &lt;attribute '__weakref__' of 'GameBoard' objects&gt;, '__doc__': '\n    description:\n        This class represents the splashscreen that will introduce the user to the game\n        and give them the options of either logging in, registering themselves in the game \n        or quitting.\n    \n    attributes:\n        _screen_size    private variable, defines screen size as passed in to the constructor of the class\n        _login_link     private variable that defines a screen area that is deemed to be selected.\n        _register_link  private variable that defines a screen area that is deemed to be selected.\n        _quit_link      private variable that defines a screen area that is deemed to be selected.\n \n        _enum_navigate  private object that defines enumeration types for navigation\n        _facade         private object that defines the facade layer between pygame and our class\n        _background     private object from pygame that represents the background\n\n    methods:\n        __init__(self, x1, y1, w, h) Constructor - pass in screen size\n        changed\n\n\n    '})</em><a class="headerlink" href="#GameBoard.GameBoard.__dict__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="GameBoard.GameBoard.__dir__">
+<code class="descname">__dir__</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#GameBoard.GameBoard.__dir__" title="Permalink to this definition">¶</a></dt>
+<dd><p>default dir() implementation</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="GameBoard.GameBoard.__eq__">
+<code class="descname">__eq__</code><a class="headerlink" href="#GameBoard.GameBoard.__eq__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return self==value.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="GameBoard.GameBoard.__format__">
+<code class="descname">__format__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GameBoard.GameBoard.__format__" title="Permalink to this definition">¶</a></dt>
+<dd><p>default object formatter</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="GameBoard.GameBoard.__ge__">
+<code class="descname">__ge__</code><a class="headerlink" href="#GameBoard.GameBoard.__ge__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return self&gt;=value.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="GameBoard.GameBoard.__getattribute__">
+<code class="descname">__getattribute__</code><a class="headerlink" href="#GameBoard.GameBoard.__getattribute__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return getattr(self, name).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="GameBoard.GameBoard.__gt__">
+<code class="descname">__gt__</code><a class="headerlink" href="#GameBoard.GameBoard.__gt__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return self&gt;value.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="GameBoard.GameBoard.__hash__">
+<code class="descname">__hash__</code><a class="headerlink" href="#GameBoard.GameBoard.__hash__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return hash(self).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="GameBoard.GameBoard.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>x1</em>, <em>y1</em>, <em>w</em>, <em>h</em>, <em>dal</em><span class="sig-paren">)</span><a class="headerlink" href="#GameBoard.GameBoard.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor - passes dimension of screen size.</p>
+<p>Parameters:
+x1 - x - coord
+y1 - y - coord
+w - width
+h - height</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="GameBoard.GameBoard.__le__">
+<code class="descname">__le__</code><a class="headerlink" href="#GameBoard.GameBoard.__le__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return self&lt;=value.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="GameBoard.GameBoard.__lt__">
+<code class="descname">__lt__</code><a class="headerlink" href="#GameBoard.GameBoard.__lt__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return self&lt;value.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="GameBoard.GameBoard.__module__">
+<code class="descname">__module__</code><em class="property"> = 'GameBoard'</em><a class="headerlink" href="#GameBoard.GameBoard.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="GameBoard.GameBoard.__ne__">
+<code class="descname">__ne__</code><a class="headerlink" href="#GameBoard.GameBoard.__ne__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return self!=value.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="GameBoard.GameBoard.__new__">
+<code class="descname">__new__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GameBoard.GameBoard.__new__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create and return a new object.  See help(type) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="GameBoard.GameBoard.__reduce__">
+<code class="descname">__reduce__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GameBoard.GameBoard.__reduce__" title="Permalink to this definition">¶</a></dt>
+<dd><p>helper for pickle</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="GameBoard.GameBoard.__reduce_ex__">
+<code class="descname">__reduce_ex__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GameBoard.GameBoard.__reduce_ex__" title="Permalink to this definition">¶</a></dt>
+<dd><p>helper for pickle</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="GameBoard.GameBoard.__repr__">
+<code class="descname">__repr__</code><a class="headerlink" href="#GameBoard.GameBoard.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return repr(self).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="GameBoard.GameBoard.__setattr__">
+<code class="descname">__setattr__</code><a class="headerlink" href="#GameBoard.GameBoard.__setattr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implement setattr(self, name, value).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="GameBoard.GameBoard.__sizeof__">
+<code class="descname">__sizeof__</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#GameBoard.GameBoard.__sizeof__" title="Permalink to this definition">¶</a></dt>
+<dd><p>size of object in memory, in bytes</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="GameBoard.GameBoard.__str__">
+<code class="descname">__str__</code><a class="headerlink" href="#GameBoard.GameBoard.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="GameBoard.GameBoard.__subclasshook__">
+<code class="descname">__subclasshook__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GameBoard.GameBoard.__subclasshook__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstract classes can override this to customize issubclass().</p>
+<p>This is invoked early on by abc.ABCMeta.__subclasscheck__().
+It should return True, False or NotImplemented.  If it returns
+NotImplemented, the normal algorithm is used.  Otherwise, it
+overrides the normal algorithm (and the outcome is cached).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="GameBoard.GameBoard.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#GameBoard.GameBoard.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="GameBoard.GameBoard.display">
+<code class="descname">display</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GameBoard.GameBoard.display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<span id="document-field"></span><div class="section" id="field">
+<h2>Field<a class="headerlink" href="#field" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-Field">
+<span id="field-screen"></span><h3>Field Screen<a class="headerlink" href="#module-Field" title="Permalink to this headline">¶</a></h3>
+<p>Module Name:</p>
+<blockquote>
+<div>login.py</div></blockquote>
+<p>Public Functions/Methods:</p>
+<blockquote>
+<div>display</div></blockquote>
+<dl class="docutils">
+<dt>Class:</dt>
+<dd>Field - This is a container class used to hold each form control
+Login - This is the main login class used to load the screen and handle the login process</dd>
+</dl>
+<p>Imports:</p>
+<blockquote>
+<div><p><strong>import pygame</strong>   - pygame library.</p>
+<p><strong>pygame.locals</strong>   - this is needed for the Rect definition.</p>
+<p><strong>enum_navigate</strong>   - common enumeration values shared across all classes.</p>
+<p><strong>facade_layer</strong>    - an abstraction from the pygame module, for certain common functions.</p>
+<p><strong>Navigate</strong>        - This class is an enumeration class that holds all the options required to move around the system.</p>
+<p><strong>pygame_textinput</strong> - a 3rd party text input class that allows text input</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>Purpose:</dt>
+<dd><p class="first">This module contains two classes the Field class and the Login class.
+The login class is used to load the screen, build a form, get the
+user input and then call the data access layer in order to determine
+if its correct or not.</p>
+<p class="last">The Field class a a simple container class that allows me to collect the information
+for each input field, such as the x,y coords and instance of the pygame_textinput
+and the name of the field and then put these into an array to allow me to cycle around
+the form.</p>
+</dd>
+<dt>Author:</dt>
+<dd>Lewis Trahearn</dd>
+</dl>
+</div>
+<hr class="docutils" />
+<div class="section" id="class-documentation">
+<h3>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="Field.Field">
+<em class="property">class </em><code class="descclassname">Field.</code><code class="descname">Field</code><span class="sig-paren">(</span><em>fieldname</em>, <em>textinput</em>, <em>x1</em>, <em>y1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Field.html#Field"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Field.Field" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This is a container class for each field within the system</p>
+<dl class="method">
+<dt id="Field.Field.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>fieldname</em>, <em>textinput</em>, <em>x1</em>, <em>y1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Field.html#Field.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Field.Field.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the constructor for the class:
+- parameters</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param fieldname:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><ul class="first simple">
+<li>name you wish to call the field</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param textinput:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><ul class="first simple">
+<li>field object</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">param x:</th><td class="field-body"><ul class="first simple">
+<li>the x coordinate of the field</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">param y:</th><td class="field-body"><ul class="first last simple">
+<li>the y coordinate of the field</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>type of parameters</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">type fieldname:</th><td class="field-body">string literal</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type textinput:</th><td class="field-body">object pygame_textinput</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">type x:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type y:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>return</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">return:</th><td class="field-body">none since its a constructor</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>return type</dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body">not applicable</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html#document-index">Battleships</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-login">Login</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-facade">Facade Layer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-gameboard">Gameboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-field">Field</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html#document-index">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Lewis Trahearn.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

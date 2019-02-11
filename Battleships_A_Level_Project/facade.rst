@@ -1,6 +1,5 @@
-Facade Layer Documentation
-==========================
-
+Facade Layer
+============
 .. automodule:: facade_layer
 	:members:
 	:undoc-members:
